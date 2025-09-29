@@ -302,7 +302,9 @@
 
         const nextMatches = document.getElementById('next-matches')
         let nextMatchesHTML = '';
-        for (let i = 1; i < Math.min(5, ideologyIndexAndDistance.length); i++) {
+
+
+        for (let i = 1; i < ideologyIndexAndDistance.length; i++) {
             const indexAndDistance = ideologyIndexAndDistance[i];
             const name = indexAndDistance.name;
             
@@ -311,7 +313,7 @@
                 const ideodesc = ideologyTexts[name].desc;
                 const relativeDistance = 1 - (indexAndDistance.distance - closestDistance) / distanceSpan;
                 const relativeDistancePercent = Math.round(relativeDistance * 1000) / 10;
-        
+                
                 nextMatchesHTML += '<dt>' + ideology + ': ' + relativeDistancePercent + '%</dt>';
                 nextMatchesHTML += '<dd>' + ideodesc + '</dd>';
             } else {
@@ -319,7 +321,7 @@
             }
         }
 
-nextMatches.innerHTML = nextMatchesHTML;
+        nextMatches.innerHTML = nextMatchesHTML;
 
         const c = document.getElementById('banner')
         const ctx = c.getContext('2d')
