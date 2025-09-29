@@ -160,28 +160,6 @@
         const international = parseFloat(getQueryVariable('d')) || 0
         const party = parseFloat(getQueryVariable('e')) || 0
         const proletariat = parseFloat(getQueryVariable('f')) || 0
-        console.log('Values:', revolution, voluntarism, central, international, party, proletariat)
-        console.log('Ideologies object:', ideologies)
-        console.log('Ideology texts:', ideologyTexts)
-        const reform = (100 - revolution).toFixed(1)
-        const economism = (100 - voluntarism).toFixed(1)
-        const decentral = (100 - central).toFixed(1)
-        const patriotic = (100 - international).toFixed(1)
-        const union = (100 - party).toFixed(1)
-        const peasantry = (100 - proletariat).toFixed(1)
-
-        document.getElementById('a-label').innerHTML = setLabel(revolution, 
-            "Extremely Revolutionary,Very Revolutionary,Revolutionary,Neutral,Reformist,Very Reformist,Extremely Reformist")
-        document.getElementById('b-label').innerHTML = setLabel(voluntarism, 
-            "Extremely Scientific,Very Scientific,Scientific,Neutral,Utopian,Very Utopian,Extremely Utopian")
-        document.getElementById('c-label').innerHTML = setLabel(central, 
-            "Extremely Centralist,Very Centralist,Centralist,Neutral,Decentralist,Very Decentralist,Extremely Decentralist")
-        document.getElementById('d-label').innerHTML = setLabel(international, 
-            "Extremely Internationalist,Very Internationalist,Internationalist,Neutral,Nationalist,Very Nationalist,Extremely Nationalist")
-        document.getElementById('e-label').innerHTML = setLabel(party, 
-            "Extremely Partisan,Very Partisan,Partisan,Neutral,Unionist,Very Unionist,Extremely Unionist")
-        document.getElementById('f-label').innerHTML = setLabel(proletariat, 
-            "Extremely Productivist,Very Productivist,Productivist,Neutral,Ecological,Very Ecological,Extremely Ecological")
 
         const ideologyTexts = {
             'Orthodox-Marxism': {
@@ -245,6 +223,29 @@
                 desc: 'Bordigism is a form of Marxism that rejects democracy and reformism, viewing the communist party itself as the historical subject of revolution and socialism, with strict adherence to Marxist orthodoxy.'
             }
         }
+
+        document.getElementById('a-label').innerHTML = setLabel(revolution, 
+            "Extremely Revolutionary,Very Revolutionary,Revolutionary,Neutral,Reformist,Very Reformist,Extremely Reformist")
+        document.getElementById('b-label').innerHTML = setLabel(voluntarism, 
+            "Extremely Scientific,Very Scientific,Scientific,Neutral,Utopian,Very Utopian,Extremely Utopian")
+        document.getElementById('c-label').innerHTML = setLabel(central, 
+            "Extremely Centralist,Very Centralist,Centralist,Neutral,Decentralist,Very Decentralist,Extremely Decentralist")
+        document.getElementById('d-label').innerHTML = setLabel(international, 
+            "Extremely Internationalist,Very Internationalist,Internationalist,Neutral,Nationalist,Very Nationalist,Extremely Nationalist")
+        document.getElementById('e-label').innerHTML = setLabel(party, 
+            "Extremely Partisan,Very Partisan,Partisan,Neutral,Unionist,Very Unionist,Extremely Unionist")
+        document.getElementById('f-label').innerHTML = setLabel(proletariat, 
+            "Extremely Productivist,Very Productivist,Productivist,Neutral,Ecological,Very Ecological,Extremely Ecological")
+
+        console.log('Values:', revolution, voluntarism, central, international, party, proletariat)
+        console.log('Ideologies object:', ideologies)
+        console.log('Ideology texts:', ideologyTexts)
+        const reform = (100 - revolution).toFixed(1)
+        const economism = (100 - voluntarism).toFixed(1)
+        const decentral = (100 - central).toFixed(1)
+        const patriotic = (100 - international).toFixed(1)
+        const union = (100 - party).toFixed(1)
+        const peasantry = (100 - proletariat).toFixed(1)
 
         setBarValue('revolution', revolution)
         setBarValue('reform', reform)
