@@ -276,3 +276,28 @@ canvas {
     font-size: 20px;
     top: 1em;
 }
+
+.button.stronglyAgree {
+    background-color: #1b5e20;
+    color: white;
+}
+
+.button.agree {
+    background-color: #4caf50;
+    color: white;
+}
+
+.button.neutral {
+    background-color: #bbbbbb; 
+    color: white;
+}
+
+.button.disagree {
+    background-color: #f44336;
+    color: white;
+}
+
+.button.stronglyDisagree {
+    background-color: #b71c1c; 
+    color: white;
+}
