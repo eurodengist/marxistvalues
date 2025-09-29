@@ -154,6 +154,19 @@
         }
         }
 
+        const revolution = getQueryVariable('a') || 0
+        const voluntarism = getQueryVariable('b') || 0
+        const central = getQueryVariable('c') || 0
+        const international = getQueryVariable('d') || 0
+        const party = getQueryVariable('e') || 0
+        const proletariat = getQueryVariable('f') || 0
+        const reform = (100 - revolution).toFixed(1)
+        const economism = (100 - voluntarism).toFixed(1)
+        const decentral = (100 - central).toFixed(1)
+        const patriotic = (100 - international).toFixed(1)
+        const union = (100 - party).toFixed(1)
+        const peasantry = (100 - proletariat).toFixed(1)
+
         document.getElementById('a-label').innerHTML = setLabel(revolution, 
             "Extremely Revolutionary,Very Revolutionary,Revolutionary,Neutral,Reformist,Very Reformist,Extremely Reformist")
         document.getElementById('b-label').innerHTML = setLabel(voluntarism, 
@@ -229,19 +242,6 @@
                 desc: 'Bordigism is a form of Marxism that rejects democracy and reformism, viewing the communist party itself as the historical subject of revolution and socialism, with strict adherence to Marxist orthodoxy.'
             }
         }
-
-        const revolution = getQueryVariable('a')
-        const voluntarism = getQueryVariable('b')
-        const central = getQueryVariable('c')
-        const international = getQueryVariable('d')
-        const party = getQueryVariable('e')
-        const proletariat = getQueryVariable('f')
-        const reform = (100 - revolution).toFixed(1)
-        const economism = (100 - voluntarism).toFixed(1)
-        const decentral = (100 - central).toFixed(1)
-        const patriotic = (100 - international).toFixed(1)
-        const union = (100 - party).toFixed(1)
-        const peasantry = (100 - proletariat).toFixed(1)
 
         setBarValue('revolution', revolution)
         setBarValue('reform', reform)
@@ -375,7 +375,7 @@
         ctx.textAlign = 'left'
         ctx.fillText('MarxistValues 1.0', 20, 90)
         ctx.font = '50px Montserrat'
-        ctx.fillText(getIdeologyNameByIndex(closestMatch.name), 20, 140)
+        ctx.fillText(ideologyTexts[closestMatch.name].name, 20, 140)
 
         ctx.fillStyle = '#dddddd'
         ctx.textAlign = 'left'
