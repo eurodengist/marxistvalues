@@ -301,16 +301,25 @@
         document.getElementById('ideodesc-label').innerHTML = ideologyTexts[closestMatch.name].desc
 
         const nextMatches = document.getElementById('next-matches')
-        nextMatches.innerHTML = ideologyIndexAndDistance.slice(1).map(function (indexAndDistance) {
-            const name = indexAndDistance.name
-            ideology = ideologyTexts[name].name
-            ideodesc = ideologyTexts[name].desc
-            const relativeDistance = 1 - (indexAndDistance.distance - closestDistance) /
-                            distanceSpan
-            const relativeDistancePercent = Math.round(relativeDistance * 1000) / 10
-            return '<dt>' + ideology + ': ' + relativeDistancePercent + '%</dt>' +
-                            '<dd>' + ideodesc + '</dd>'
-        }).join('\n')
+        let nextMatchesHTML = '';
+        for (let i = 1; i < Math.min(5, ideologyIndexAndDistance.length); i++) {
+            const indexAndDistance = ideologyIndexAndDistance[i];
+            const name = indexAndDistance.name;
+            
+            if (ideologyTexts[name]) {
+                const ideology = ideologyTexts[name].name;
+                const ideodesc = ideologyTexts[name].desc;
+                const relativeDistance = 1 - (indexAndDistance.distance - closestDistance) / distanceSpan;
+                const relativeDistancePercent = Math.round(relativeDistance * 1000) / 10;
+        
+                nextMatchesHTML += '<dt>' + ideology + ': ' + relativeDistancePercent + '%</dt>';
+                nextMatchesHTML += '<dd>' + ideodesc + '</dd>';
+            } else {
+                console.log('Missing ideology text for:', name);
+            }
+        }
+
+nextMatches.innerHTML = nextMatchesHTML;
 
         const c = document.getElementById('banner')
         const ctx = c.getContext('2d')
