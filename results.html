@@ -14,8 +14,8 @@
 
 <body>
 
-    <h1 data-i18n="result_h1">MarxistValues 1.0</h1>
-    <h1 data-i18n="result_h1">Results</h1>
+    <h1>MarxistValues 1.0</h1>
+    <h1">Results</h1>
 
     <h2><span class="weight-300" id="a-label"></span></h2>
     <div class="axis">
@@ -84,24 +84,24 @@
         <img id="img-peasantry" src="value_images/peasantry.png" height="128pt" />
     </div>
     <h2><span class="weight-300" id="g-label"></span></h2>
-    <h2 data-i18n="result_h2_match">Closest Match:<span class="weight-300" id="ideology-label"></span></h2>
+    <h2>Closest Match:<span class="weight-300" id="ideology-label"></span></h2>
     <h3><span class="weight-300" id="ideodesc-label"></span></h3>
-    <p data-i18n="result_url"><br>You can send these results by copying and pasting the URL at the top of the page or
+    <p><br>You can send these results by copying and pasting the URL at the top of the page or
         using the image below.</p>
 
-    <h2 data-i18n="result_h2_next_matches">Next closest matches</h2>
-    <p data-i18n="next_matches_percent">With your closest match as 100% and farthest as 0%, here is how closely you
+    <h2>Next closest matches</h2>
+    <p>With your closest match as 100% and farthest as 0%, here is how closely you
         matched the other ideologies.</p>
 
     <dl id="next-matches"></dl>
 
     <canvas id="banner" width=800 height=1000 style="font-family:Montserrat"></canvas>
-    <button data-i18n="result_back" class="button" onclick="location.href='index.html';"
+    <button class="button" onclick="location.href='index.html';"
         style="background-color: #2196f3;">Back</button> <br>
     <!-- JavaScript for the test itself -->
-    <script type="application/javascript" src="i18n.js"></script>
+    <script type="application/javascript"></script>
     <script>
-        /* global i18n, ideologies */
+        /* ideologies */
         function getQueryVariable (variable) {
         var query = window.location.search.substring(1)
         var vars = query.split('&')
@@ -154,12 +154,80 @@
         }
         }
 
-        function getIdeologyNameByIndex (name) {
-        return i18n.getString(`ideology_${name}_name`)
-        }
+        document.getElementById('a-label').innerHTML = setLabel(revolution, 
+            "Extremely Revolutionary,Very Revolutionary,Revolutionary,Neutral,Reformist,Very Reformist,Extremely Reformist")
+        document.getElementById('b-label').innerHTML = setLabel(voluntarism, 
+            "Extremely Scientific,Very Scientific,Scientific,Neutral,Utopian,Very Utopian,Extremely Utopian")
+        document.getElementById('c-label').innerHTML = setLabel(central, 
+            "Extremely Centralist,Very Centralist,Centralist,Neutral,Decentralist,Very Decentralist,Extremely Decentralist")
+        document.getElementById('d-label').innerHTML = setLabel(international, 
+            "Extremely Internationalist,Very Internationalist,Internationalist,Neutral,Nationalist,Very Nationalist,Extremely Nationalist")
+        document.getElementById('e-label').innerHTML = setLabel(party, 
+            "Extremely Partisan,Very Partisan,Partisan,Neutral,Unionist,Very Unionist,Extremely Unionist")
+        document.getElementById('f-label').innerHTML = setLabel(proletariat, 
+            "Extremely Productivist,Very Productivist,Productivist,Neutral,Ecological,Very Ecological,Extremely Ecological")
 
-        function getIdeologyDescriptionByIndex (name) {
-        return i18n.getString(`ideology_${name}_desc`)
+        const ideologyTexts = {
+            'Orthodox-Marxism': {
+                name: 'Orthodox Marxism',
+                desc: 'Orthodox Marxism (Kautskyism) is a form of Marxism that emphasizes gradual, parliamentary paths to socialism through democratic institutions. It upholds Marx’s scientific determinism while rejecting premature insurrection or vanguardist approaches to revolution.'
+            },
+            'Leninism': {
+                name: 'Leninism',
+                desc: 'Leninism is a form of Marxism that stresses the need for a disciplined vanguard party, democratic centralism, and proletarian dictatorship to overthrow capitalism and establish socialism through organized revolutionary leadership.'
+            },
+            'Marxism-Leninism': {
+                name: 'Marxism-Leninism', 
+                desc: 'Marxism-Leninism is a form of state socialism that combines Marxist analysis with Leninist organization, supporting a centralized party, planned economy, and proletarian dictatorship as the foundation of socialist governance.'
+            },
+            'Trotskyism': {
+                name: 'Trotskyism',
+                desc: 'Trotskyism is a form of Marxism that advocates permanent revolution, workers’ democracy, and international struggle against capitalism, rejecting Stalinist “socialism in one country” and bureaucratic authoritarianism.'
+            },
+            'Frankfurt-School': {
+                name: 'Frankfurt School',
+                desc: 'Frankfurt School is a form of Neo-Marxist theory that integrates Marxism, psychoanalysis, and cultural critique, emphasizing how ideology, mass culture, and social domination sustain capitalism beyond its economic base.'
+            },
+            'Council-Communism': {
+                name: 'Council Communism', 
+                desc: 'Council Communism is a form of communism that rejects party rule, advocating workers’ councils and direct proletarian democracy as the true basis of socialist governance and economic planning.'
+            },
+            'Maoism': {
+                name: 'Maoism',
+                desc: 'Maoism is a form of Marxism-Leninism that adapts to agrarian societies, emphasizing peasant-led revolution, protracted people’s war, and ongoing cultural struggle to prevent capitalist restoration.'
+            },
+            'Anarcho-Communism': {
+                name: 'Anarcho-Communism',
+                desc: 'Anarcho-Communism is a form of libertarian socialism that envisions a stateless, classless, moneyless society built on voluntary cooperation, common ownership, and decentralized self-management.'
+            },
+            'Luxemburgism': {
+                name: 'Luxemburgism', 
+                desc: 'Luxemburgism is a form of Marxism that stresses mass spontaneity, grassroots democracy, and revolutionary self-emancipation of the working class, rejecting authoritarian centralism and reformist gradualism.'
+            },
+            'Titoism': {
+                name: 'Titoism',
+                desc: 'Titoism is a form of socialism developed in Yugoslavia that emphasizes workers’ self-management, non-alignment in global politics, and independence from Soviet control.'
+            },
+            'Hoxhaism': {
+                name: 'Hoxhaism',
+                desc: 'Hoxhaism is a form of anti-revisionist Marxism-Leninism rooted in Stalinist orthodoxy, rejecting both Soviet and Chinese deviations while advocating centralized planning and strict proletarian dictatorship.'
+            },
+            'Eurocommunism': {
+                name: 'Eurocommunism', 
+                desc: 'Eurocommunism is a form of Western Marxism that supports democratic institutions, pluralism, and independence from Moscow, advocating a parliamentary path to socialism within liberal democracies.'
+            },
+            'Sankarism': {
+                name: 'Sankarism',
+                desc: 'Sankarism is a form of African socialism that blends Marxism with anti-imperialism, feminism, and ecological sustainability, emphasizing grassroots empowerment and revolutionary transformation under Thomas Sankara’s leadership.'
+            },
+            'Juche': {
+                name: 'Juche',
+                desc: 'Juche is a form of North Korean socialism that emphasizes self-reliance, national independence, and absolute leadership under the Workers’ Party, positioning ideology above material conditions.'
+            },
+            'Bordigism': {
+                name: 'Bordigism', 
+                desc: 'Bordigism is a form of Marxism that rejects democracy and reformism, viewing the communist party itself as the historical subject of revolution and socialism, with strict adherence to Marxist orthodoxy.'
+            }
         }
 
         const revolution = getQueryVariable('a')
@@ -187,16 +255,6 @@
         setBarValue('union', union)
         setBarValue('proletariat', proletariat)
         setBarValue('peasantry', peasantry)
-
-        document.getElementById('a-label').innerHTML = setLabel(revolution, i18n.getString(
-            'result_a_label'))
-        document.getElementById('b-label').innerHTML = setLabel(voluntarism, i18n.getString(
-            'result_b_label'))
-        document.getElementById('c-label').innerHTML = setLabel(central, i18n.getString('result_c_label'))
-        document.getElementById('d-label').innerHTML = setLabel(international, i18n.getString(
-            'result_d_label'))
-        document.getElementById('e-label').innerHTML = setLabel(party, i18n.getString('result_e_label'))
-        document.getElementById('f-label').innerHTML = setLabel(proletariat, i18n.getString('result_f_label'))
 
         let ideology = ''
         let ideodesc = ''
@@ -362,7 +420,7 @@
 
         ctx.fillStyle = '#222222'
         ctx.font = '300 30px Montserrat'
-        ctx.fillText('marxistvalues.github.io', 780, 60)
+        ctx.fillText('https://eurodengist.github.io/marxistvalues/', 780, 60)
         ctx.textAlign = 'center'
         ctx.fillText('' + document.getElementById('a-label').innerHTML, 400, 175)
         ctx.fillText('' + document.getElementById('b-label').innerHTML, 400, 295)
