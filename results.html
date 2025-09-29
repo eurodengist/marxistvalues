@@ -293,15 +293,14 @@
         const distanceSpan = farthestDistance - closestDistance
 
         closestMatch = ideologyIndexAndDistance[0]
-        document.getElementById('ideology-label').innerHTML = getIdeologyNameByIndex(closestMatch.name)
-        document.getElementById('ideodesc-label').innerHTML = getIdeologyDescriptionByIndex(closestMatch
-            .name)
+        document.getElementById('ideology-label').innerHTML = ideologyTexts[closestMatch.name].name
+        document.getElementById('ideodesc-label').innerHTML = ideologyTexts[closestMatch.name].desc
 
         const nextMatches = document.getElementById('next-matches')
         nextMatches.innerHTML = ideologyIndexAndDistance.slice(1).map(function (indexAndDistance) {
             const name = indexAndDistance.name
-            ideology = getIdeologyNameByIndex(name)
-            ideodesc = getIdeologyDescriptionByIndex(name)
+            ideology = ideologyTexts[name].name
+            ideodesc = ideologyTexts[name].desc
             const relativeDistance = 1 - (indexAndDistance.distance - closestDistance) /
                             distanceSpan
             const relativeDistancePercent = Math.round(relativeDistance * 1000) / 10
