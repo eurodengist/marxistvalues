@@ -154,12 +154,15 @@
         }
         }
 
-        const revolution = getQueryVariable('a') || 0
-        const voluntarism = getQueryVariable('b') || 0
-        const central = getQueryVariable('c') || 0
-        const international = getQueryVariable('d') || 0
-        const party = getQueryVariable('e') || 0
-        const proletariat = getQueryVariable('f') || 0
+        const revolution = parseFloat(getQueryVariable('a')) || 0
+        const voluntarism = parseFloat(getQueryVariable('b')) || 0
+        const central = parseFloat(getQueryVariable('c')) || 0
+        const international = parseFloat(getQueryVariable('d')) || 0
+        const party = parseFloat(getQueryVariable('e')) || 0
+        const proletariat = parseFloat(getQueryVariable('f')) || 0
+        console.log('Values:', revolution, voluntarism, central, international, party, proletariat)
+        console.log('Ideologies object:', ideologies)
+        console.log('Ideology texts:', ideologyTexts)
         const reform = (100 - revolution).toFixed(1)
         const economism = (100 - voluntarism).toFixed(1)
         const decentral = (100 - central).toFixed(1)
