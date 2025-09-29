@@ -84,7 +84,7 @@
         <img id="img-peasantry" src="value_images/peasantry.png" height="128pt" />
     </div>
     <h2><span class="weight-300" id="g-label"></span></h2>
-    <h2>Closest Match:<span class="weight-300" id="ideology-label"></span></h2>
+    <h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
     <h3><span class="weight-300" id="ideodesc-label"></span></h3>
     <p><br>You can send these results by copying and pasting the URL at the top of the page or
         using the image below.</p>
@@ -360,7 +360,7 @@
         ctx.fillRect(120, 540, 560, 80)
         ctx.fillRect(120, 660, 560, 80)
         ctx.fillRect(120, 780, 560, 80)
-        ctx.fillRect(120, 900, 560, 80)
+        // ctx.fillRect(120, 900, 560, 80) //
         ctx.fillStyle = '#890000'
         ctx.fillRect(120, 184, 5.6 * revolution - 2, 72)
         ctx.fillStyle = '#FC5959'
@@ -392,7 +392,7 @@
         ctx.font = '50px Montserrat'
         ctx.fillText(ideologyTexts[closestMatch.name].name, 20, 140)
 
-        ctx.fillStyle = '#dddddd'
+        ctx.fillStyle = '#222222'
         ctx.textAlign = 'left'
         if (revolution > 30) {
             ctx.fillText(revolution + '%', 130, 237.5)
