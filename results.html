@@ -95,7 +95,8 @@
 
     <dl id="next-matches"></dl>
 
-    <canvas id="banner" width=800 height=950 style="font-family:Montserrat"></canvas>
+    <img id="banner-image" src="" alt="MarxistValues Results" style="max-width: 100%; height: auto;">
+    <canvas id="banner" width=800 height=950 style="font-family:Montserrat; display:none;"></canvas>
     <button class="button" onclick="location.href='index.html';"
         style="background-color: #2196f3;">Back</button> <br>
     <!-- JavaScript for the test itself -->
@@ -443,6 +444,8 @@
         ctx.fillText('' + document.getElementById('e-label').innerHTML, 400, 655)
         ctx.fillText('' + document.getElementById('f-label').innerHTML, 400, 775)
         ctx.fillText('' + document.getElementById('g-label').innerHTML, 400, 895)
+
+        document.getElementById('banner-image').src = c.toDataURL('image/png')
     </script>
 </body>
 
