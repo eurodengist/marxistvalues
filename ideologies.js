@@ -1,122 +1,114 @@
-const ideologies = { // eslint-disable-line no-unused-vars
+const ideologies = {
   'Orthodox-Marxism': {
-    a: 65,
-    b: 35,
-    c: 60,
-    d: 85,
-    e: 65,
-    f: 40
+    a: 40,
+    b: 26,
+    c: 63,
+    d: 71,
+    e: 62,
+    f: 57
   },
   'Leninism': {
     a: 90,
-    b: 25,
-    c: 90,
+    b: 62,
+    c: 82,
     d: 80,
-    e: 90,
-    f: 70
+    e: 78,
+    f: 78
   },
   'Marxism-Leninism': {
-    a: 90,
-    b: 15,
-    c: 100,
-    d: 30,
-    e: 100,
-    f: 100
+    a: 89,
+    b: 66,
+    c: 89,
+    d: 35,
+    e: 80,
+    f: 90
   },
   'Trotskyism': {
-    a: 100,
-    b: 40,
-    c: 80,
-    d: 100,
-    e: 90,
-    f: 80
-  },
-  'Frankfurt School': {
-    a: 15,
-    b: 85,
-    c: 40,
-    d: 70,
-    e: 10,
-    f: 10
+    a: 81,
+    b: 48,
+    c: 51,
+    d: 90,
+    e: 70,
+    f: 57
   },
   'Council-Communism': {
-    a: 100,
-    b: 60,
+    a: 85,
+    b: 15,
     c: 20,
-    d: 90,
-    e: 10,
-    f: 70
+    d: 73,
+    e: 12,
+    f: 62
   },
-  'Maoism': {
-    a: 100,
-    b: 10,
-    c: 80,
+  'MZT': {
+    a: 92,
+    b: 68,
+    c: 84,
     d: 40,
-    e: 90,
-    f: 20
+    e: 76,
+    f: 63
   },
-  'Anarcho-Communism': {
-    a: 100,
-    b: 80,
-    c: 0,
-    d: 100,
-    e: 0,
-    f: 40
+  'Libertarian-Communism': {
+    a: 86,
+    b: 36,
+    c: 3,
+    d: 77,
+    e: 15,
+    f: 33
   },
   'Luxemburgism': {
-    a: 90,
-    b: 50,
-    c: 35,
-    d: 90,
-    e: 50,
-    f: 30
+    a: 88,
+    b: 37,
+    c: 50,
+    d: 80,
+    e: 68,
+    f: 57
   },
   'Titoism': {
-    a: 50,
-    b: 40,
-    c: 50,
-    d: 20,
-    e: 70,
-    f: 40
+    a: 86,
+    b: 50,
+    c: 28,
+    d: 33,
+    e: 60,
+    f: 37
   },
   'Hoxhaism': {
-    a: 100,
-    b: 30,
-    c: 100,
-    d: 50,
-    e: 100,
-    f: 90
+    a: 96,
+    b: 70,
+    c: 90,
+    d: 26,
+    e: 77,
+    f: 92
   },
   'Eurocommunism': {
-    a: 10,
-    b: 60,
-    c: 40,
-    d: 25,
-    e: 60,
-    f: 30
+    a: 13,
+    b: 43,
+    c: 27,
+    d: 36,
+    e: 44,
+    f: 41
   },
   'Sankarism': {
-    a: 70,
-    b: 20,
-    c: 70,
+    a: 90,
+    b: 60,
+    c: 50,
     d: 40,
-    e: 50,
-    f: 15
+    e: 57,
+    f: 35
   },
   'Juche': {
-    a: 80,
-    b: 0,
-    c: 100,
-    d: 0,
-    e: 100,
-    f: 50
+    a: 90,
+    b: 97,
+    c: 92,
+    d: 13,
+    e: 74,
+    f: 77
   },
   'Bordigism': {
-    a: 100,
-    b: 50,
-    c: 100,
-    d: 100,
-    e: 100,
-    f: 90
+    a: 91,
+    b: 19,
+    c: 73,
+    d: 81,
+    e: 76,
+    f: 93
   }
 }
