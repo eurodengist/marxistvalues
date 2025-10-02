@@ -1,5 +1,5 @@
 questions = [
-    // Revolution - Reform
+    // Revolution - Reform +5
     {
         "question": "Reforming capitalist society to achieve better rights for workers is desirable.",
         "effect": {
@@ -110,7 +110,62 @@ questions = [
             "f": 0
         }
     },
-    // Voluntarism - Economism
+    {
+        "question": "The capitalist state apparatus cannot be reformed or taken over; it must be completely smashed and replaced by a dictatorship of the proletariat.",
+        "effect": {
+            "a": 10,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "Social reforms under capitalism are at best temporary concessions that ultimately strengthen the system by pacifying the working class.",
+        "effect": {
+            "a": 5,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "A peaceful, parliamentary road to socialism is possible in countries with developed democratic institutions.",
+        "effect": {
+            "a": -10,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "The capitalist state can be gradually transformed into an instrument of the people through sustained electoral victories and progressive legislation.",
+        "effect": {
+            "a": -5,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "Violent revolution is an outdated and counterproductive concept that alienates the masses and leads to unnecessary suffering.",
+        "effect": {
+            "a": -10,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0
+        }
+    },
+    // Voluntarism - Economism +5
     {
         "question": "Material conditions and needs are the dominant drive behind socioeconomic changes.",
         "effect": {
@@ -221,7 +276,62 @@ questions = [
             "f": 0
         }
     },
-    // Centralism
+    {
+        "question": "The determined revolutionary will of a conscious vanguard is the ultimate decisive force in history, capable of overcoming any objective material obstacle.",
+        "effect": {
+            "a": 5,
+            "b": 5,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "The pace of socialist construction is limited only by the consciousness and mobilization of the masses, not by a society's level of economic development.",
+        "effect": {
+            "a": 0,
+            "b": 10,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "The political consciousness of the working class arises spontaneously and organically from its direct economic struggles on the shop floor.",
+        "effect": {
+            "a": 0,
+            "b": -10,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "The transition to socialism is a historical inevitability dictated by the unfolding of economic laws; the role of the party is to guide this natural process, not to force it.",
+        "effect": {
+            "a": 0,
+            "b": -5,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "The primary evidence of a society's progress toward socialism is the growth of its productive forces and the material well-being of its people, not the intensity of its ideological campaigns.",
+        "effect": {
+            "a": 0,
+            "b": -5,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0
+        }
+    },
+    // Central-Decentral +5
     {
         "question": "An economy is generally designed better when it is organized bottom-up rather than top-down.",
         "effect": {
@@ -332,7 +442,62 @@ questions = [
             "f": 0
         }
     },
-    // Internationalism - Patriotism
+    {
+        "question": "A planned economy is impossible without a strong, centralized authority to collectivize resources, direct investment, and coordinate production for the entire nation.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 10,
+            "d": 0,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "The self-management of individual factories or communes, without central oversight, leads to economic anarchy, group egoism, and the restoration of capitalist relations.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 5,
+            "d": 0,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "Granting significant autonomy to regional or local bodies creates the conditions for the emergence of competing power centers and potential nationalist or separatist movements.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 5,
+            "d": 0,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "Decentralization of security apparatuses creates militias and warlordism; the monopoly on legitimate force must be held exclusively by the central state under Party control.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 10,
+            "d": 0,
+            "e": 5,
+            "f": 0
+        }
+    },
+    {
+        "question": "The financial and banking system is the lifeblood of the socialist economy, and its control must be absolutely centralized to prevent capital flight, local corruption, and speculative activities.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 5,
+            "d": 0,
+            "e": 0,
+            "f": 0
+        }
+    },
+    // Internationalism - Patriotism +5
     {
         "question": "A world socialist republic is a realistic and desirable goal.",
         "effect": {
@@ -443,7 +608,62 @@ questions = [
             "f": 0
         }
     },
-    // Party - Union
+    {
+        "question": "The working man has no country; the very concept of the 'nation-state' is a bourgeois construct designed to divide the global proletariat.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 10,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "The interests of the global revolution must always take precedence over the perceived national interests of any single socialist state.",
+        "effect": {
+            "a": 5,
+            "b": 0,
+            "c": 0,
+            "d": 5,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "National culture and traditions, when purged of their feudal and bourgeois elements, provide a vital and unique foundation for building a distinct socialist culture.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": -10,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "While expressing solidarity, a socialist state cannot sacrifice the well-being of its own people to fund foreign revolutions or adhere to suicidal internationalist dogmas.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": -5,
+            "e": 0,
+            "f": 0
+        }
+    },
+    {
+        "question": "National sovereignty is a precious achievement of the socialist struggle and must be defended against all forms of foreign interference, whether economic, political, or cultural.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": -5,
+            "e": 0,
+            "f": 0
+        }
+    },
+    // Party - Union +5
     {
         "question": "Socialist political parties should participate in liberal democratic elections.",
         "effect": {
@@ -554,7 +774,62 @@ questions = [
             "f": 0
         }
     },
-    // Proletariat - Peasantry
+    {
+        "question": "Trade unions, on their own, can only develop 'trade union consciousness,' and therefore must be under the direct political and ideological leadership of the revolutionary Party to achieve socialist aims.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 5,
+            "f": 0
+        }
+    },
+    {
+        "question": "The Party, as the vanguard of the proletariat, has a broader and more scientific understanding of the class struggle than any single union, which is limited to economistic demands.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 10,
+            "f": 0
+        }
+    },
+    {
+        "question": "Union leadership must be composed of disciplined Party members to ensure the union's activities align with the central political and economic objectives of the revolution.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 5,
+            "d": 0,
+            "e": 10,
+            "f": 0
+        }
+    },
+    {
+        "question": "The ultimate loyalty of every union member must be to the Party and the socialist state it leads, not to the union as an independent organization.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 5,
+            "d": -5,
+            "e": 10,
+            "f": 0
+        }
+    },
+    {
+        "question": "Criticizing the Party's leadership from within a union platform is a form of factionalism that weakens proletarian unity and objectively aids the class enemy.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 5,
+            "f": 0
+        }
+    },
+    // Proletariat - Peasantry + 5
     {
         "question": "The industrial working class should be the leading force in the socialist revolution.",
         "effect": {
@@ -563,7 +838,7 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 5
+            "f": 10
         }
     },
     {
@@ -585,7 +860,7 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 10
+            "f": 20
         }
     },
     {
@@ -629,7 +904,7 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": -10
+            "f": -5
         }
     },
     {
@@ -656,6 +931,61 @@ questions = [
     },
     {
         "question": "Socialist movements in predominantly peasant societies require different strategies than in industrialized ones.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": -5
+        }
+    },
+    {
+        "question": "The peasantry, due to its scattered and petty-bourgeois nature, is inherently incapable of developing a revolutionary class consciousness and must be led by the urban proletariat.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 5
+        }
+    },
+    {
+        "question": "A Worker-Peasant Alliance fundamentally means the peasantry must subordinate its agrarian interests to the larger goals of socialist industrialization set by the proletarian state.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 10
+        }
+    },
+    {
+        "question": "The ultimate goal of the Worker-Peasant Alliance is not a permanent compromise but the eventual dissolution of the peasantry as a distinct class through industrialization and the creation of an agricultural proletariat.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 10
+        }
+    },
+    {
+        "question": "The peasantry's desire for private ownership of land is a fundamentally reactionary impulse that must be overcome to build socialism.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 5
+        }
+    },
+    {
+        "question": "The peasantry, as the main producers of food, holds the strategic power to sustain or break a revolution, and their voluntary support is the true measure of a government's legitimacy.",
         "effect": {
             "a": 0,
             "b": 0,
