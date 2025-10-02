@@ -4,7 +4,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700%7CRoboto:400,700" rel="stylesheet">
     <link href='style.css' rel='stylesheet' type='text/css'>
-    <title>MarxistValues 1.0 Results</title>
+    <title>MarxistValues 1.1 Results</title>
     <link rel="icon" type="image/png" href="icon.png">
     <link rel="shortcut icon" type="image/png" href="icon.png">
     <meta charset="utf-8">
@@ -14,8 +14,7 @@
 
 <body>
 
-    <h1>MarxistValues 1.0</h1>
-    <h1">Results</h1>
+    <h1>MarxistValues 1.1<br>Results</h1>
 
     <h2><span class="weight-300" id="a-label"></span></h2>
     <div class="axis">
@@ -95,10 +94,10 @@
 
     <dl id="next-matches"></dl>
 
-    <img id="banner-image" src="" alt="MarxistValues Results" style="max-width: 100%; height: auto;">
+    <img id="banner-image" src="" alt="MarxistValues Results" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border: 3px solid #222; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
     <canvas id="banner" width=800 height=950 style="font-family:Montserrat; display:none;"></canvas>
     <button class="button" onclick="location.href='index.html';"
-        style="background-color: #2196f3;">Back</button> <br>
+        style="background-color: #2196f3; margin-top: 20px;">Back</button> <br>
     <!-- JavaScript for the test itself -->
     <script type="application/javascript"></script>
     <script>
@@ -179,21 +178,17 @@
                 name: 'Trotskyism',
                 desc: 'Trotskyism is a form of Marxism that advocates permanent revolution, workers’ democracy, and international struggle against capitalism, rejecting Stalinist “socialism in one country” and bureaucratic authoritarianism.'
             },
-            'Frankfurt-School': {
-                name: 'Frankfurt School',
-                desc: 'Frankfurt School is a form of Neo-Marxist theory that integrates Marxism, psychoanalysis, and cultural critique, emphasizing how ideology, mass culture, and social domination sustain capitalism beyond its economic base.'
-            },
             'Council-Communism': {
                 name: 'Council Communism', 
                 desc: 'Council Communism is a form of communism that rejects party rule, advocating workers’ councils and direct proletarian democracy as the true basis of socialist governance and economic planning.'
             },
-            'Maoism': {
-                name: 'Maoism',
-                desc: 'Maoism is a form of Marxism-Leninism that adapts to agrarian societies, emphasizing peasant-led revolution, protracted people’s war, and ongoing cultural struggle to prevent capitalist restoration.'
+            'MZT': {
+                name: 'Mao Zedong Thought',
+                desc: "Mao Zedong Thought is an ideology blending Marxism-Leninism with Chinese realities, emphasizing peasant-led revolution, class struggle, continuous revolution, and the Communist Party's central role."
             },
-            'Anarcho-Communism': {
-                name: 'Anarcho-Communism',
-                desc: 'Anarcho-Communism is a form of libertarian socialism that envisions a stateless, classless, moneyless society built on voluntary cooperation, common ownership, and decentralized self-management.'
+            'Libertarian-Communism': {
+                name: 'Libertarian Communism',
+                desc: 'Libertarian communism is an ideology that advocates for a stateless, classless society based on voluntary federation and common ownership.'
             },
             'Luxemburgism': {
                 name: 'Luxemburgism', 
@@ -324,128 +319,130 @@
 
         nextMatches.innerHTML = nextMatchesHTML;
 
-        const c = document.getElementById('banner')
-        const ctx = c.getContext('2d')
-        ctx.fillStyle = '#EEEEEE'
-        ctx.fillRect(0, 0, 800, 1000)
-
-        let img = document.getElementById('img-revolution')
-        ctx.drawImage(img, 20, 170, 100, 100)
-        img = document.getElementById('img-reform')
-        ctx.drawImage(img, 680, 170, 100, 100)
-        img = document.getElementById('img-voluntarism')
-        ctx.drawImage(img, 20, 290, 100, 100)
-        img = document.getElementById('img-economism')
-        ctx.drawImage(img, 680, 290, 100, 100)
-        img = document.getElementById('img-central')
-        ctx.drawImage(img, 20, 410, 100, 100)
-        img = document.getElementById('img-decentral')
-        ctx.drawImage(img, 680, 410, 100, 100)
-        img = document.getElementById('img-international')
-        ctx.drawImage(img, 20, 530, 100, 100)
-        img = document.getElementById('img-patriotic')
-        ctx.drawImage(img, 680, 530, 100, 100)
-        img = document.getElementById('img-party')
-        ctx.drawImage(img, 20, 650, 100, 100)
-        img = document.getElementById('img-union')
-        ctx.drawImage(img, 680, 650, 100, 100)
-        img = document.getElementById('img-proletariat')
-        ctx.drawImage(img, 20, 770, 100, 100)
-        img = document.getElementById('img-peasantry')
-        ctx.drawImage(img, 680, 770, 100, 100)
-
-        ctx.fillStyle = '#222222'
-        ctx.fillRect(120, 180, 560, 80)
-        ctx.fillRect(120, 300, 560, 80)
-        ctx.fillRect(120, 420, 560, 80)
-        ctx.fillRect(120, 540, 560, 80)
-        ctx.fillRect(120, 660, 560, 80)
-        ctx.fillRect(120, 780, 560, 80)
-        // ctx.fillRect(120, 900, 560, 80) //
-        ctx.fillStyle = '#890000'
-        ctx.fillRect(120, 184, 5.6 * revolution - 2, 72)
-        ctx.fillStyle = '#FC5959'
-        ctx.fillRect(682 - 5.6 * reform, 184, 5.6 * reform - 2, 72)
-        ctx.fillStyle = '#237B88'
-        ctx.fillRect(120, 304, 5.6 * voluntarism - 2, 72)
-        ctx.fillStyle = '#7F7000'
-        ctx.fillRect(682 - 5.6 * economism, 304, 5.6 * economism - 2, 72)
-        ctx.fillStyle = '#560000'
-        ctx.fillRect(120, 424, 5.6 * central - 2, 72)
-        ctx.fillStyle = '#000000'
-        ctx.fillRect(682 - 5.6 * decentral, 424, 5.6 * decentral - 2, 72)
-        ctx.fillStyle = '#782F52'
-        ctx.fillRect(120, 544, 5.6 * international - 2, 72)
-        ctx.fillStyle = '#703A13'
-        ctx.fillRect(682 - 5.6 * patriotic, 544, 5.6 * patriotic - 2, 72)
-        ctx.fillStyle = '#963B33'
-        ctx.fillRect(120, 664, 5.6 * party - 2, 72)
-        ctx.fillStyle = '#7F333B'
-        ctx.fillRect(682 - 5.6 * union, 664, 5.6 * union - 2, 72)
-        ctx.fillStyle = '#61380B'
-        ctx.fillRect(120, 784, 5.6 * proletariat - 2, 72)
-        ctx.fillStyle = '#256E20'
-        ctx.fillRect(682 - 5.6 * peasantry, 784, 5.6 * peasantry - 2, 72)
-        ctx.fillStyle = '#222222'
-        ctx.font = '700 80px Montserrat'
-        ctx.textAlign = 'left'
-        ctx.fillText('MarxistValues 1.0', 20, 90)
-        ctx.font = '50px Montserrat'
-        ctx.fillText(ideologyTexts[closestMatch.name].name, 20, 140)
-
-        ctx.fillStyle = '#dddddd'
-        ctx.textAlign = 'left'
-        if (revolution > 30) {
-            ctx.fillText(revolution + '%', 130, 237.5)
-        }
-        if (voluntarism > 30) {
-            ctx.fillText(voluntarism + '%', 130, 357.5)
-        }
-        if (central > 30) {
-            ctx.fillText(central + '%', 130, 477.5)
-        }
-        if (international > 30) {
-            ctx.fillText(international + '%', 130, 597.5)
-        }
-        if (party > 30) {
-            ctx.fillText(party + '%', 130, 717.5)
-        }
-        if (proletariat > 30) {
-            ctx.fillText(proletariat + '%', 130, 837.5)
-        }
-        ctx.textAlign = 'right'
-        if (reform > 30) {
-            ctx.fillText(reform + '%', 670, 237.5)
-        }
-        if (economism > 30) {
-            ctx.fillText(economism + '%', 670, 357.5)
-        }
-        if (decentral > 30) {
-            ctx.fillText(decentral + '%', 670, 477.5)
-        }
-        if (patriotic > 30) {
-             ctx.fillText(patriotic + '%', 670, 597.5)
-        }
-        if (union > 30) {
-            ctx.fillText(union + '%', 670, 717.5)
-        }
-        if (peasantry > 30) {
-            ctx.fillText(peasantry + '%', 670, 837.5)
+        function createImage(src, x, y, w, h) {
+            img = new Image ()
+            img.src = src
+            img.onLoad = function() {
+                ctx.drawImage(img, x, y, w, h)
+            }
         }
 
-        ctx.fillStyle = '#222222'
-        ctx.font = '300 30px Montserrat'
-        ctx.fillText('https://eurodengist.github.io/marxistvalues/', 780, 920)
-        ctx.textAlign = 'center'
-        ctx.fillText('' + document.getElementById('a-label').innerHTML, 400, 175)
-        ctx.fillText('' + document.getElementById('b-label').innerHTML, 400, 295)
-        ctx.fillText('' + document.getElementById('c-label').innerHTML, 400, 415)
-        ctx.fillText('' + document.getElementById('d-label').innerHTML, 400, 535)
-        ctx.fillText('' + document.getElementById('e-label').innerHTML, 400, 655)
-        ctx.fillText('' + document.getElementById('f-label').innerHTML, 400, 775)
-        ctx.fillText('' + document.getElementById('g-label').innerHTML, 400, 895)
+        window.onload = function() {
+            var c = document.createElement("canvas")
+            var ctx = c.getContext("2d")
+            c.width = 800;
+            c.height = 950;
+            ctx.fillStyle = "#EEEEEE"
+            ctx.fillRect(0,0,800,950);
 
-        document.getElementById('banner-image').src = c.toDataURL('image/png')
+            function loadImage(src) {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.onload = () => resolve(img);
+                    img.onerror = reject;
+                    img.src = src;
+                });
+            }
+
+            Promise.all([
+                loadImage('value_images/revolution.png'),
+                loadImage('value_images/reform.png'),
+                loadImage('value_images/voluntarism.png'),
+                loadImage('value_images/economism.png'),
+                loadImage('value_images/central.png'),
+                loadImage('value_images/decentral.png'),
+                loadImage('value_images/international.png'),
+                loadImage('value_images/patriotic.png'),
+                loadImage('value_images/party.png'),
+                loadImage('value_images/union.png'),
+                loadImage('value_images/proletariat.png'),
+                loadImage('value_images/peasantry.png')
+            ]).then(images => {
+                ctx.drawImage(images[0], 20, 170, 100, 100);  // revolution
+                ctx.drawImage(images[1], 680, 170, 100, 100); // reform
+                ctx.drawImage(images[2], 20, 290, 100, 100);  // voluntarism
+                ctx.drawImage(images[3], 680, 290, 100, 100); // economism
+                ctx.drawImage(images[4], 20, 410, 100, 100);  // central
+                ctx.drawImage(images[5], 680, 410, 100, 100); // decentral
+                ctx.drawImage(images[6], 20, 530, 100, 100);  // international
+                ctx.drawImage(images[7], 680, 530, 100, 100); // patriotic
+                ctx.drawImage(images[8], 20, 650, 100, 100);  // party
+                ctx.drawImage(images[9], 680, 650, 100, 100); // union
+                ctx.drawImage(images[10], 20, 770, 100, 100); // proletariat
+                ctx.drawImage(images[11], 680, 770, 100, 100); // peasantry
+
+            ctx.fillStyle = '#222222'
+            ctx.fillRect(120, 180, 560, 80)
+            ctx.fillRect(120, 300, 560, 80)
+            ctx.fillRect(120, 420, 560, 80)
+            ctx.fillRect(120, 540, 560, 80)
+            ctx.fillRect(120, 660, 560, 80)
+            ctx.fillRect(120, 780, 560, 80)
+            ctx.fillStyle = '#890000'
+            ctx.fillRect(120, 184, 5.6 * revolution - 2, 72)
+            ctx.fillStyle = '#FC5959'
+            ctx.fillRect(682 - 5.6 * reform, 184, 5.6 * reform - 2, 72)
+            ctx.fillStyle = '#237B88'
+            ctx.fillRect(120, 304, 5.6 * voluntarism - 2, 72)
+            ctx.fillStyle = '#7F7000'
+            ctx.fillRect(682 - 5.6 * economism, 304, 5.6 * economism - 2, 72)
+            ctx.fillStyle = '#560000'
+            ctx.fillRect(120, 424, 5.6 * central - 2, 72)
+            ctx.fillStyle = '#000000'
+            ctx.fillRect(682 - 5.6 * decentral, 424, 5.6 * decentral - 2, 72)
+            ctx.fillStyle = '#782F52'
+            ctx.fillRect(120, 544, 5.6 * international - 2, 72)
+            ctx.fillStyle = '#703A13'
+            ctx.fillRect(682 - 5.6 * patriotic, 544, 5.6 * patriotic - 2, 72)
+            ctx.fillStyle = '#963B33'
+            ctx.fillRect(120, 664, 5.6 * party - 2, 72)
+            ctx.fillStyle = '#7F333B'
+            ctx.fillRect(682 - 5.6 * union, 664, 5.6 * union - 2, 72)
+            ctx.fillStyle = '#61380B'
+            ctx.fillRect(120, 784, 5.6 * proletariat - 2, 72)
+            ctx.fillStyle = '#256E20'
+            ctx.fillRect(682 - 5.6 * peasantry, 784, 5.6 * peasantry - 2, 72)
+            ctx.fillStyle = '#222222'
+            ctx.font = '700 80px Montserrat'
+            ctx.textAlign = 'left'
+            ctx.fillText('MarxistValues 1.1', 20, 90)
+            ctx.font = '50px Montserrat'
+            ctx.fillText(ideologyTexts[closestMatch.name].name, 20, 140)
+
+            ctx.fillStyle = '#FFFFFF'
+            ctx.textAlign = 'left'
+            if (revolution > 30) {ctx.fillText(revolution + '%', 130, 237.5)}
+            if (voluntarism > 30) {ctx.fillText(voluntarism + '%', 130, 357.5)}
+            if (central > 30) {ctx.fillText(central + '%', 130, 477.5)}
+            if (international > 30) {ctx.fillText(international + '%', 130, 597.5)}
+            if (party > 30) {ctx.fillText(party + '%', 130, 717.5)}
+            if (proletariat > 30) {ctx.fillText(proletariat + '%', 130, 837.5)}
+            ctx.textAlign = 'right'
+            if (reform > 30) {ctx.fillText(reform + '%', 670, 237.5)}
+            if (economism > 30) {ctx.fillText(economism + '%', 670, 357.5)}
+            if (decentral > 30) {ctx.fillText(decentral + '%', 670, 477.5)}
+            if (patriotic > 30) {ctx.fillText(patriotic + '%', 670, 597.5)}
+            if (union > 30) {ctx.fillText(union + '%', 670, 717.5)}
+            if (peasantry > 30) {ctx.fillText(peasantry + '%', 670, 837.5)}
+
+            ctx.fillStyle = '#222222'
+            ctx.font = '300 30px Montserrat'
+            ctx.fillText('eurodengist.github.io/marxistvalues/', 780, 920)
+            ctx.textAlign = 'center'
+            ctx.fillText('' + document.getElementById('a-label').innerHTML, 400, 175)
+            ctx.fillText('' + document.getElementById('b-label').innerHTML, 400, 295)
+            ctx.fillText('' + document.getElementById('c-label').innerHTML, 400, 415)
+            ctx.fillText('' + document.getElementById('d-label').innerHTML, 400, 535)
+            ctx.fillText('' + document.getElementById('e-label').innerHTML, 400, 655)
+            ctx.fillText('' + document.getElementById('f-label').innerHTML, 400, 775)
+            ctx.fillText('' + document.getElementById('g-label').innerHTML, 400, 895)
+
+            document.getElementById("banner-image").src = c.toDataURL();
+            c.style.display = 'block';
+            }).catch(error => {
+                console.error('Error loading images:', error);
+            });
+        }
     </script>
 </body>
 
