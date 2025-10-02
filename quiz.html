@@ -4,134 +4,446 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700%7CRoboto:400,700" rel="stylesheet">
     <link href='style.css' rel='stylesheet' type='text/css'>
-    <title>MarxistValues Quiz</title>
+    <title>MarxistValues 1.1 Results</title>
     <link rel="icon" type="image/png" href="icon.png">
     <link rel="shortcut icon" type="image/png" href="icon.png">
     <meta charset="utf-8">
+    <script type="application/javascript" src="ideologies.js">
+    </script>
 </head>
 
 <body>
-    <script type="application/javascript" src="questions.js"></script>
 
-    <h2 style="text-align:center;" id="question-number">Loading...</h2>
-    <p class="question" id="question-text"></p>
-    <button class="button" onclick="nextQuestion( 1.0)"
-        style="background-color: #1b5e20;">Strongly Agree</button> <br>
-    <button class="button" onclick="nextQuestion( 0.5)"
-        style="background-color: #4caf50;">Agree</button> <br>
-    <button class="button" onclick="nextQuestion( 0.0)"
-        style="background-color: #bbbbbb;">Neutral/Unsure</button> <br>
-    <button class="button" onclick="nextQuestion(-0.5)"
-        style="background-color: #f44336;">Disagree</button> <br>
-    <button class="button" onclick="nextQuestion(-1.0)"
-        style="background-color: #b71c1c;">Strongly Disagree</button> <br>
-    <button class="small_button" onclick="prevQuestion()" id="back_button">Back</button>
-    <button class="small_button_off" id="back_button_off">Back</button>
-    <br>
+    <h1>MarxistValues 1.1<br>Results</h1>
 
+    <h2><span class="weight-300" id="a-label"></span></h2>
+    <div class="axis">
+        <img id="img-revolution" src="value_images/revolution.png" height="128pt" />
+        <div class="bar revolution" id="bar-revolution">
+            <div class="text-wrapper" id="revolution"></div>
+        </div>
+        <div class="bar reform" id="bar-reform">
+            <div class="text-wrapper" id="reform"></div>
+        </div>
+        <img id="img-reform" src="value_images/reform.png" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="b-label"></span></h2>
+    <div class="axis">
+        <img id="img-voluntarism" src="value_images/voluntarism.png" height="128pt" />
+        <div class="bar voluntarism" id="bar-voluntarism">
+            <div class="text-wrapper" id="voluntarism"></div>
+        </div>
+        <div class="bar economism" id="bar-economism">
+            <div class="text-wrapper" id="economism"></div>
+        </div>
+        <img id="img-economism" src="value_images/economism.png" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="c-label"></span></h2>
+    <div class="axis">
+        <img id="img-central" src="value_images/central.png" height="128pt" />
+        <div class="bar central" id="bar-central">
+            <div class="text-wrapper" id="central"></div>
+        </div>
+        <div class="bar decentral" id="bar-decentral">
+            <div class="text-wrapper" id="decentral"></div>
+        </div>
+        <img id="img-decentral" src="value_images/decentral.png" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="d-label"></span></h2>
+    <div class="axis">
+        <img id="img-international" src="value_images/international.png" height="128pt" />
+        <div class="bar international" id="bar-international">
+            <div class="text-wrapper" id="international"></div>
+        </div>
+        <div class="bar patriotic" id="bar-patriotic">
+            <div class="text-wrapper" id="patriotic"></div>
+        </div>
+        <img id="img-patriotic" src="value_images/patriotic.png" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="e-label"></span></h2>
+    <div class="axis">
+        <img id="img-party" src="value_images/party.png" height="128pt" />
+        <div class="bar party" id="bar-party">
+            <div class="text-wrapper" id="party"></div>
+        </div>
+        <div class="bar union" id="bar-union">
+            <div class="text-wrapper" id="union"></div>
+        </div>
+        <img id="img-union" src="value_images/union.png" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="f-label"></span></h2>
+    <div class="axis">
+        <img id="img-proletariat" src="value_images/proletariat.png" height="128pt" />
+        <div class="bar proletariat" id="bar-proletariat">
+            <div class="text-wrapper" id="proletariat"></div>
+        </div>
+        <div class="bar peasantry" id="bar-peasantry">
+            <div class="text-wrapper" id="peasantry"></div>
+        </div>
+        <img id="img-peasantry" src="value_images/peasantry.png" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="g-label"></span></h2>
+    <h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
+    <h3><span class="weight-300" id="ideodesc-label"></span></h3>
+    <p><br>You can send these results by copying and pasting the URL at the top of the page or
+        using the image below.</p>
+
+    <h2>Next closest matches</h2>
+    <p>With your closest match as 100% and farthest as 0%, here is how closely you
+        matched the other ideologies.</p>
+
+    <dl id="next-matches"></dl>
+
+    <img id="banner-image" src="" alt="MarxistValues Results" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border: 3px solid #222; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <canvas id="banner" width=800 height=950 style="font-family:Montserrat; display:none;"></canvas>
+    <button class="button" onclick="location.href='index.html';"
+        style="background-color: #2196f3; margin-top: 20px;">Back</button> <br>
     <!-- JavaScript for the test itself -->
+    <script type="application/javascript"></script>
     <script>
-    /* global questions */
-    let maxA, maxB, maxC, maxD, maxE, maxF
-    maxA = maxB = maxC = maxD = maxE = maxF = 0
-    let a, b, c, d, e, f 
-    a = b = c = d = e = f = 0
-    let qn = [] 
-    let qi = 0
-    populateQn()
-    let answers = []
-
-    function initQuestion () {
-        const currentQuestion = questions[qn[qi]]
-        document.getElementById('question-text').innerHTML = currentQuestion.question
-        document.getElementById('question-number').innerHTML = `Question ${qi + 1} of ${questions.length}`
-        
-        if (qi === 0) {
-            document.getElementById('back_button').style.display = 'none'
-            document.getElementById('back_button_off').style.display = 'block'
+        /* ideologies */
+        function getQueryVariable (variable) {
+        var query = window.location.search.substring(1)
+        var vars = query.split('&')
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=')
+            if (pair[0] === variable) {
+            return pair[1]
+            }
         }
-        else {
-            document.getElementById('back_button').style.display = 'block'
-            document.getElementById('back_button_off').style.display = 'none'
+        return (NaN)
         }
-    }
 
-    function nextQuestion (mult) {
-        const currentQuestion = questions[qn[qi]]
-        const effect = currentQuestion.effect
-        
-        answers[qi] = mult
-        
-        a += mult * effect.a
-        b += mult * effect.b
-        c += mult * effect.c
-        d += mult * effect.d
-        e += mult * effect.e
-        f += mult * effect.f
-        
-        qi++
-        
-        if (qi < questions.length) {
-            initQuestion()
+        function setBarValue (name, value) {
+        const innerel = document.getElementById(name)
+        const outerel = document.getElementById('bar-' + name)
+        outerel.style.width = (value + '%')
+        innerel.innerHTML = (value + '%')
+        if (innerel.offsetWidth + 20 > outerel.offsetWidth) {
+            innerel.style.visibility = 'hidden'
         }
-        else {
-            results()
         }
-    }
 
-    function prevQuestion () {
-        if (qi === 0) {
-            return
+        function setLabel (val, ary) {
+        ary = ary.split(',')
+        if (val > 100) {
+            return ''
+        } else
+        if (val > 90) {
+            return ary[0]
+        } else
+        if (val > 75) {
+            return ary[1]
+        } else
+        if (val > 60) {
+            return ary[2]
+        } else
+        if (val >= 40) {
+            return ary[3]
+        } else
+        if (val >= 25) {
+            return ary[4]
+        } else
+        if (val >= 10) {
+            return ary[5]
+        } else
+        if (val >= 0) {
+            return ary[6]
+        } else {
+            return ''
         }
-        
-        qi--
-        const currentQuestion = questions[qn[qi]]
-        const effect = currentQuestion.effect
-
-        const prevAnswer = answers[qi]
-        a -= prevAnswer * effect.a
-        b -= prevAnswer * effect.b
-        c -= prevAnswer * effect.c
-        d -= prevAnswer * effect.d
-        e -= prevAnswer * effect.e
-        f -= prevAnswer * effect.f
-        
-        answers[qi] = undefined
-        
-        initQuestion()
-    }
-
-    function calcScore (score, max) {
-        return (100 * (max + score) / (2 * max)).toFixed(1)
-    }
-
-    function populateQn() {
-        for (let i = 0; i < questions.length; i++) {
-            qn.push(i)
         }
-    }
 
-    function results () {
-        window.location.href = 'results.html' +
-                        `?a=${calcScore(a, maxA)}` +
-                        `&b=${calcScore(b, maxB)}` +
-                        `&c=${calcScore(c, maxC)}` +
-                        `&d=${calcScore(d, maxD)}` +
-                        `&e=${calcScore(e, maxE)}` +
-                        `&f=${calcScore(f, maxF)}`
-    }
+        const revolution = parseFloat(getQueryVariable('a')) || 0
+        const voluntarism = parseFloat(getQueryVariable('b')) || 0
+        const central = parseFloat(getQueryVariable('c')) || 0
+        const international = parseFloat(getQueryVariable('d')) || 0
+        const party = parseFloat(getQueryVariable('e')) || 0
+        const proletariat = parseFloat(getQueryVariable('f')) || 0
 
-    initQuestion()
-    for (let i = 0; i < questions.length; i++) {
-        const effect = questions[i].effect
-        maxA += Math.abs(effect.a)
-        maxB += Math.abs(effect.b)
-        maxC += Math.abs(effect.c)
-        maxD += Math.abs(effect.d)
-        maxE += Math.abs(effect.e)
-        maxF += Math.abs(effect.f)
-    }
-</script>
+        const ideologyTexts = {
+            'Orthodox-Marxism': {
+                name: 'Orthodox Marxism',
+                desc: 'Orthodox Marxism (Kautskyism) is a form of Marxism that emphasizes gradual, parliamentary paths to socialism through democratic institutions. It upholds Marx’s scientific determinism while rejecting premature insurrection or vanguardist approaches to revolution.'
+            },
+            'Leninism': {
+                name: 'Leninism',
+                desc: 'Leninism is a form of Marxism that stresses the need for a disciplined vanguard party, democratic centralism, and proletarian dictatorship to overthrow capitalism and establish socialism through organized revolutionary leadership.'
+            },
+            'Marxism-Leninism': {
+                name: 'Marxism-Leninism', 
+                desc: 'Marxism-Leninism is a form of state socialism that combines Marxist analysis with Leninist organization, supporting a centralized party, planned economy, and proletarian dictatorship as the foundation of socialist governance.'
+            },
+            'Trotskyism': {
+                name: 'Trotskyism',
+                desc: 'Trotskyism is a form of Marxism that advocates permanent revolution, workers’ democracy, and international struggle against capitalism, rejecting Stalinist “socialism in one country” and bureaucratic authoritarianism.'
+            },
+            'Council-Communism': {
+                name: 'Council Communism', 
+                desc: 'Council Communism is a form of communism that rejects party rule, advocating workers’ councils and direct proletarian democracy as the true basis of socialist governance and economic planning.'
+            },
+            'MZT': {
+                name: 'Mao Zedong Thought',
+                desc: "Mao Zedong Thought is an ideology blending Marxism-Leninism with Chinese realities, emphasizing peasant-led revolution, class struggle, continuous revolution, and the Communist Party's central role."
+            },
+            'Libertarian-Communism': {
+                name: 'Libertarian Communism',
+                desc: 'Libertarian communism is an ideology that advocates for a stateless, classless society based on voluntary federation and common ownership.'
+            },
+            'Luxemburgism': {
+                name: 'Luxemburgism', 
+                desc: 'Luxemburgism is a form of Marxism that stresses mass spontaneity, grassroots democracy, and revolutionary self-emancipation of the working class, rejecting authoritarian centralism and reformist gradualism.'
+            },
+            'Titoism': {
+                name: 'Titoism',
+                desc: 'Titoism is a form of socialism developed in Yugoslavia that emphasizes workers’ self-management, non-alignment in global politics, and independence from Soviet control.'
+            },
+            'Hoxhaism': {
+                name: 'Hoxhaism',
+                desc: 'Hoxhaism is a form of anti-revisionist Marxism-Leninism rooted in Stalinist orthodoxy, rejecting both Soviet and Chinese deviations while advocating centralized planning and strict proletarian dictatorship.'
+            },
+            'Eurocommunism': {
+                name: 'Eurocommunism', 
+                desc: 'Eurocommunism is a form of Western Marxism that supports democratic institutions, pluralism, and independence from Moscow, advocating a parliamentary path to socialism within liberal democracies.'
+            },
+            'Sankarism': {
+                name: 'Sankarism',
+                desc: 'Sankarism is a form of African socialism that blends Marxism with anti-imperialism, feminism, and ecological sustainability, emphasizing grassroots empowerment and revolutionary transformation under Thomas Sankara’s leadership.'
+            },
+            'Juche': {
+                name: 'Juche',
+                desc: 'Juche is a form of North Korean socialism that emphasizes self-reliance, national independence, and absolute leadership under the Workers’ Party, positioning ideology above material conditions.'
+            },
+            'Bordigism': {
+                name: 'Bordigism', 
+                desc: 'Bordigism is a form of Marxism that rejects democracy and reformism, viewing the communist party itself as the historical subject of revolution and socialism, with strict adherence to Marxist orthodoxy.'
+            }
+        }
+
+        document.getElementById('a-label').innerHTML = setLabel(revolution, 
+            "Extremely Revolutionary,Very Revolutionary,Revolutionary,Neutral,Reformist,Very Reformist,Extremely Reformist")
+        document.getElementById('b-label').innerHTML = setLabel(voluntarism, 
+            "Extremely Voluntarist,Very Voluntarist,Voluntarist,Neutral,Economist,Very Economist,Extremely Economist")
+        document.getElementById('c-label').innerHTML = setLabel(central, 
+            "Extremely Centralist,Very Centralist,Centralist,Neutral,Decentralist,Very Decentralist,Extremely Decentralist")
+        document.getElementById('d-label').innerHTML = setLabel(international, 
+            "Extremely Internationalist,Very Internationalist,Internationalist,Neutral,Patriotic,Very Patriotic,Extremely Patriotic")
+        document.getElementById('e-label').innerHTML = setLabel(party, 
+            "Extremely Partisan,Very Partisan,Partisan,Neutral,Unionist,Very Unionist,Extremely Unionist")
+        document.getElementById('f-label').innerHTML = setLabel(proletariat, 
+            "Extremely Proletarian,Very Proletarian,Proletarian,Neutral,Peasant,Very Peasant,Extremely Peasant")
+
+        console.log('Values:', revolution, voluntarism, central, international, party, proletariat)
+        console.log('Ideologies object:', ideologies)
+        console.log('Ideology texts:', ideologyTexts)
+        const reform = (100 - revolution).toFixed(1)
+        const economism = (100 - voluntarism).toFixed(1)
+        const decentral = (100 - central).toFixed(1)
+        const patriotic = (100 - international).toFixed(1)
+        const union = (100 - party).toFixed(1)
+        const peasantry = (100 - proletariat).toFixed(1)
+
+        setBarValue('revolution', revolution)
+        setBarValue('reform', reform)
+        setBarValue('economism', economism)
+        setBarValue('voluntarism', voluntarism)
+        setBarValue('central', central)
+        setBarValue('decentral', decentral)
+        setBarValue('patriotic', patriotic)
+        setBarValue('international', international)
+        setBarValue('party', party)
+        setBarValue('union', union)
+        setBarValue('proletariat', proletariat)
+        setBarValue('peasantry', peasantry)
+
+        let ideology = ''
+        let ideodesc = ''
+        const ideologyIndexAndDistance = []
+        var closestMatch = {}
+
+        let index = 0
+        for (const name of Object.keys(ideologies)) {
+            let dist = 0
+            dist += Math.pow(Math.abs(ideologies[name].a - revolution), 2)
+            dist += Math.pow(Math.abs(ideologies[name].c - central), 2)
+            dist += Math.pow(Math.abs(ideologies[name].b - voluntarism), 2)
+            dist += Math.pow(Math.abs(ideologies[name].d - international), 2)
+            dist += Math.pow(Math.abs(ideologies[name].e - party), 2)
+            dist += Math.pow(Math.abs(ideologies[name].f - proletariat), 2)
+
+            // ideologyToDistance[name] = dist
+            ideologyIndexAndDistance.push({
+            distance: dist,
+            name,
+            index
+            })
+            index++
+        }
+
+        ideologyIndexAndDistance.sort(function (a, b) {
+            return a.distance - b.distance
+        })
+
+        const distances = ideologyIndexAndDistance.map(function (indexAndDistance) {
+            return indexAndDistance.distance
+        })
+
+        const closestDistance = distances[0]
+        const farthestDistance = distances[distances.length - 1]
+        const distanceSpan = farthestDistance - closestDistance
+
+        closestMatch = ideologyIndexAndDistance[0]
+        document.getElementById('ideology-label').innerHTML = ideologyTexts[closestMatch.name].name
+        document.getElementById('ideodesc-label').innerHTML = ideologyTexts[closestMatch.name].desc
+
+        const nextMatches = document.getElementById('next-matches')
+        let nextMatchesHTML = '';
+
+
+        for (let i = 1; i < ideologyIndexAndDistance.length; i++) {
+            const indexAndDistance = ideologyIndexAndDistance[i];
+            const name = indexAndDistance.name;
+            
+            if (ideologyTexts[name]) {
+                const ideology = ideologyTexts[name].name;
+                const ideodesc = ideologyTexts[name].desc;
+                const relativeDistance = 1 - (indexAndDistance.distance - closestDistance) / distanceSpan;
+                const relativeDistancePercent = Math.round(relativeDistance * 1000) / 10;
+                
+                nextMatchesHTML += '<dt>' + ideology + ': ' + relativeDistancePercent + '%</dt>';
+                nextMatchesHTML += '<dd>' + ideodesc + '</dd>';
+            } else {
+                console.log('Missing ideology text for:', name);
+            }
+        }
+
+        nextMatches.innerHTML = nextMatchesHTML;
+
+        function createImage(src, x, y, w, h) {
+            img = new Image ()
+            img.src = src
+            img.onLoad = function() {
+                ctx.drawImage(img, x, y, w, h)
+            }
+        }
+
+        window.onload = function() {
+            var c = document.createElement("canvas")
+            var ctx = c.getContext("2d")
+            c.width = 800;
+            c.height = 950;
+            ctx.fillStyle = "#EEEEEE"
+            ctx.fillRect(0,0,800,950);
+
+            function loadImage(src) {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.onload = () => resolve(img);
+                    img.onerror = reject;
+                    img.src = src;
+                });
+            }
+
+            Promise.all([
+                loadImage('value_images/revolution.png'),
+                loadImage('value_images/reform.png'),
+                loadImage('value_images/voluntarism.png'),
+                loadImage('value_images/economism.png'),
+                loadImage('value_images/central.png'),
+                loadImage('value_images/decentral.png'),
+                loadImage('value_images/international.png'),
+                loadImage('value_images/patriotic.png'),
+                loadImage('value_images/party.png'),
+                loadImage('value_images/union.png'),
+                loadImage('value_images/proletariat.png'),
+                loadImage('value_images/peasantry.png')
+            ]).then(images => {
+                ctx.drawImage(images[0], 20, 170, 100, 100);  // revolution
+                ctx.drawImage(images[1], 680, 170, 100, 100); // reform
+                ctx.drawImage(images[2], 20, 290, 100, 100);  // voluntarism
+                ctx.drawImage(images[3], 680, 290, 100, 100); // economism
+                ctx.drawImage(images[4], 20, 410, 100, 100);  // central
+                ctx.drawImage(images[5], 680, 410, 100, 100); // decentral
+                ctx.drawImage(images[6], 20, 530, 100, 100);  // international
+                ctx.drawImage(images[7], 680, 530, 100, 100); // patriotic
+                ctx.drawImage(images[8], 20, 650, 100, 100);  // party
+                ctx.drawImage(images[9], 680, 650, 100, 100); // union
+                ctx.drawImage(images[10], 20, 770, 100, 100); // proletariat
+                ctx.drawImage(images[11], 680, 770, 100, 100); // peasantry
+
+            ctx.fillStyle = '#222222'
+            ctx.fillRect(120, 180, 560, 80)
+            ctx.fillRect(120, 300, 560, 80)
+            ctx.fillRect(120, 420, 560, 80)
+            ctx.fillRect(120, 540, 560, 80)
+            ctx.fillRect(120, 660, 560, 80)
+            ctx.fillRect(120, 780, 560, 80)
+            ctx.fillStyle = '#890000'
+            ctx.fillRect(120, 184, 5.6 * revolution - 2, 72)
+            ctx.fillStyle = '#FC5959'
+            ctx.fillRect(682 - 5.6 * reform, 184, 5.6 * reform - 2, 72)
+            ctx.fillStyle = '#237B88'
+            ctx.fillRect(120, 304, 5.6 * voluntarism - 2, 72)
+            ctx.fillStyle = '#7F7000'
+            ctx.fillRect(682 - 5.6 * economism, 304, 5.6 * economism - 2, 72)
+            ctx.fillStyle = '#560000'
+            ctx.fillRect(120, 424, 5.6 * central - 2, 72)
+            ctx.fillStyle = '#000000'
+            ctx.fillRect(682 - 5.6 * decentral, 424, 5.6 * decentral - 2, 72)
+            ctx.fillStyle = '#782F52'
+            ctx.fillRect(120, 544, 5.6 * international - 2, 72)
+            ctx.fillStyle = '#703A13'
+            ctx.fillRect(682 - 5.6 * patriotic, 544, 5.6 * patriotic - 2, 72)
+            ctx.fillStyle = '#963B33'
+            ctx.fillRect(120, 664, 5.6 * party - 2, 72)
+            ctx.fillStyle = '#7F333B'
+            ctx.fillRect(682 - 5.6 * union, 664, 5.6 * union - 2, 72)
+            ctx.fillStyle = '#61380B'
+            ctx.fillRect(120, 784, 5.6 * proletariat - 2, 72)
+            ctx.fillStyle = '#256E20'
+            ctx.fillRect(682 - 5.6 * peasantry, 784, 5.6 * peasantry - 2, 72)
+            ctx.fillStyle = '#222222'
+            ctx.font = '700 80px Montserrat'
+            ctx.textAlign = 'left'
+            ctx.fillText('MarxistValues 1.1', 20, 90)
+            ctx.font = '50px Montserrat'
+            ctx.fillText(ideologyTexts[closestMatch.name].name, 20, 140)
+
+            ctx.fillStyle = '#FFFFFF'
+            ctx.textAlign = 'left'
+            if (revolution > 30) {ctx.fillText(revolution + '%', 130, 237.5)}
+            if (voluntarism > 30) {ctx.fillText(voluntarism + '%', 130, 357.5)}
+            if (central > 30) {ctx.fillText(central + '%', 130, 477.5)}
+            if (international > 30) {ctx.fillText(international + '%', 130, 597.5)}
+            if (party > 30) {ctx.fillText(party + '%', 130, 717.5)}
+            if (proletariat > 30) {ctx.fillText(proletariat + '%', 130, 837.5)}
+            ctx.textAlign = 'right'
+            if (reform > 30) {ctx.fillText(reform + '%', 670, 237.5)}
+            if (economism > 30) {ctx.fillText(economism + '%', 670, 357.5)}
+            if (decentral > 30) {ctx.fillText(decentral + '%', 670, 477.5)}
+            if (patriotic > 30) {ctx.fillText(patriotic + '%', 670, 597.5)}
+            if (union > 30) {ctx.fillText(union + '%', 670, 717.5)}
+            if (peasantry > 30) {ctx.fillText(peasantry + '%', 670, 837.5)}
+
+            ctx.fillStyle = '#222222'
+            ctx.font = '300 30px Montserrat'
+            ctx.fillText('eurodengist.github.io/marxistvalues/', 780, 920)
+            ctx.textAlign = 'center'
+            ctx.fillText('' + document.getElementById('a-label').innerHTML, 400, 175)
+            ctx.fillText('' + document.getElementById('b-label').innerHTML, 400, 295)
+            ctx.fillText('' + document.getElementById('c-label').innerHTML, 400, 415)
+            ctx.fillText('' + document.getElementById('d-label').innerHTML, 400, 535)
+            ctx.fillText('' + document.getElementById('e-label').innerHTML, 400, 655)
+            ctx.fillText('' + document.getElementById('f-label').innerHTML, 400, 775)
+            ctx.fillText('' + document.getElementById('g-label').innerHTML, 400, 895)
+
+            document.getElementById("banner-image").src = c.toDataURL();
+            c.style.display = 'block';
+            }).catch(error => {
+                console.error('Error loading images:', error);
+            });
+        }
+    </script>
 </body>
 
 </html>
