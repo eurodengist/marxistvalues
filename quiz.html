@@ -1,102 +1,137 @@
+<!DOCTYPE html>
+<html>
+
 <head>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
-<link href='style.css' rel='stylesheet' type='text/css'>
-<title>8values Quiz</title>
-<link rel="icon" type="x-icon" href="icon.png">
-<link rel="shortcut icon" type="x-icon" href="icon.png">
-<meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700%7CRoboto:400,700" rel="stylesheet">
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <title>MarxistValues Quiz</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="shortcut icon" type="image/png" href="icon.png">
+    <meta charset="utf-8">
 </head>
+
 <body>
-<script type="application/javascript"
-        src="questions.js">
-</script>
-<h1>8values</h1>
-<hr>
-<h2 style="text-align:center;" id="question-number">Loading...</h2>
-<p class="question" id="question-text"></p>
-<button class="button stronglyAgree" onclick="next_question( 1.0)">Strongly Agree</button> <br>
-<button class="button agree" onclick="next_question( 0.5)">Agree</button> <br>
-<button class="button neutral" onclick="next_question( 0.0)">Neutral/Unsure</button> <br>
-<button class="button disagree" onclick="next_question(-0.5)">Disagree</button> <br>
-<button class="button stronglyDisagree" onclick="next_question(-1.0)">Strongly Disagree</button> <br>
-<button class="small_button" onclick="prev_question()" id="back_button">Back</button>
-<button class="small_button_off" id="back_button_off">Back</button><br>
+    <script type="application/javascript" src="questions.js"></script>
 
-<!-- JavaScript for the test itself -->
-<script>
-    var max_a, max_b, max_c, max_d, max_e, max_f // Max possible scores
-        max_a = max_b = max_c = max_d = max_e = max_f = 0
-    let a_array = new Array(questions.length);
-    let b_array = new Array(questions.length);
-    let c_array = new Array(questions.length);
-    let d_array = new Array(questions.length);
-    let e_array = new Array(questions.length);
-    let f_array = new Array(questions.length);
-    var qn = 0; // Question number
-    init_question();
-    for (var i = 0; i < questions.length; i++) {
-        max_a += Math.abs(questions[i].effect.a)
-        max_b += Math.abs(questions[i].effect.b)
-        max_c += Math.abs(questions[i].effect.c)
-        max_d += Math.abs(questions[i].effect.d)
-        max_e += Math.abs(questions[i].effect.e)
-        max_f += Math.abs(questions[i].effect.f)
-    }
-    function init_question() {
-        document.getElementById("question-text").innerHTML = questions[qn].question;
-        document.getElementById("question-number").innerHTML = "Question " + (qn + 1) + " of " + (questions.length);
-        if (qn == 0) {
-            document.getElementById("back_button").style.display = 'none';
-            document.getElementById("back_button_off").style.display = 'block';
-        } else {
-            document.getElementById("back_button").style.display = 'block';
-            document.getElementById("back_button_off").style.display = 'none';
+    <h2 style="text-align:center;" id="question-number">Loading...</h2>
+    <p class="question" id="question-text"></p>
+    <button class="button" onclick="nextQuestion( 1.0)"
+        style="background-color: #1b5e20;">Strongly Agree</button> <br>
+    <button class="button" onclick="nextQuestion( 0.5)"
+        style="background-color: #4caf50;">Agree</button> <br>
+    <button class="button" onclick="nextQuestion( 0.0)"
+        style="background-color: #bbbbbb;">Neutral/Unsure</button> <br>
+    <button class="button" onclick="nextQuestion(-0.5)"
+        style="background-color: #f44336;">Disagree</button> <br>
+    <button class="button" onclick="nextQuestion(-1.0)"
+        style="background-color: #b71c1c;">Strongly Disagree</button> <br>
+    <button class="small_button" onclick="prevQuestion()" id="back_button">Back</button>
+    <button class="small_button_off" id="back_button_off">Back</button>
+    <br>
+
+    <!-- JavaScript for the test itself -->
+    <script>
+    /* global questions */
+    let maxA, maxB, maxC, maxD, maxE, maxF
+    maxA = maxB = maxC = maxD = maxE = maxF = 0
+    let a, b, c, d, e, f 
+    a = b = c = d = e = f = 0
+    let qn = [] 
+    let qi = 0
+    populateQn()
+    let answers = []
+
+    function initQuestion () {
+        const currentQuestion = questions[qn[qi]]
+        document.getElementById('question-text').innerHTML = currentQuestion.question
+        document.getElementById('question-number').innerHTML = `Question ${qi + 1} of ${questions.length}`
+        
+        if (qi === 0) {
+            document.getElementById('back_button').style.display = 'none'
+            document.getElementById('back_button_off').style.display = 'block'
         }
-
-    }
-
-    function next_question(mult) {
-        a_array[qn] = mult*questions[qn].effect.a
-        b_array[qn] = mult*questions[qn].effect.b
-        c_array[qn] = mult*questions[qn].effect.c
-        d_array[qn] = mult*questions[qn].effect.d
-        e_array[qn] = mult*questions[qn].effect.e
-        f_array[qn] = mult*questions[qn].effect.f
-        qn++;
-        if (qn < questions.length) {
-            init_question();
-        } else {
-            results();
+        else {
+            document.getElementById('back_button').style.display = 'block'
+            document.getElementById('back_button_off').style.display = 'none'
         }
     }
 
-    function prev_question() {
-        if (qn == 0) {
-            return;
+    function nextQuestion (mult) {
+        const currentQuestion = questions[qn[qi]]
+        const effect = currentQuestion.effect
+        
+        answers[qi] = mult
+        
+        a += mult * effect.a
+        b += mult * effect.b
+        c += mult * effect.c
+        d += mult * effect.d
+        e += mult * effect.e
+        f += mult * effect.f
+        
+        qi++
+        
+        if (qi < questions.length) {
+            initQuestion()
         }
-        qn--;
-        init_question();
+        else {
+            results()
+        }
     }
 
-    function calc_score(score,max) {
-        return (100*(max+score)/(2*max)).toFixed(1)
+    function prevQuestion () {
+        if (qi === 0) {
+            return
+        }
+        
+        qi--
+        const currentQuestion = questions[qn[qi]]
+        const effect = currentQuestion.effect
+
+        const prevAnswer = answers[qi]
+        a -= prevAnswer * effect.a
+        b -= prevAnswer * effect.b
+        c -= prevAnswer * effect.c
+        d -= prevAnswer * effect.d
+        e -= prevAnswer * effect.e
+        f -= prevAnswer * effect.f
+        
+        answers[qi] = undefined
+        
+        initQuestion()
     }
 
-    function results() {
-        let final_a = a_array.reduce((a, b) => a + b, 0)
-        let final_b = b_array.reduce((a, b) => a + b, 0)
-        let final_c = c_array.reduce((a, b) => a + b, 0)
-        let final_d = d_array.reduce((a, b) => a + b, 0)
-        let final_e = e_array.reduce((a, b) => a + b, 0)
-        let final_f = f_array.reduce((a, b) => a + b, 0)
-        location.href = `results.html`
-            + `?a=${calc_score(final_a, max_a)}`
-            + `&b=${calc_score(final_b, max_b)}`
-            + `&c=${calc_score(final_c, max_c)}`
-            + `&d=${calc_score(final_d, max_d)}`
-            + `&e=${calc_score(final_e, max_e)}`
-            + `&f=${calc_score(final_f, max_f)}`
-            
+    function calcScore (score, max) {
+        return (100 * (max + score) / (2 * max)).toFixed(1)
+    }
+
+    function populateQn() {
+        for (let i = 0; i < questions.length; i++) {
+            qn.push(i)
+        }
+    }
+
+    function results () {
+        window.location.href = 'results.html' +
+                        `?a=${calcScore(a, maxA)}` +
+                        `&b=${calcScore(b, maxB)}` +
+                        `&c=${calcScore(c, maxC)}` +
+                        `&d=${calcScore(d, maxD)}` +
+                        `&e=${calcScore(e, maxE)}` +
+                        `&f=${calcScore(f, maxF)}`
+    }
+
+    initQuestion()
+    for (let i = 0; i < questions.length; i++) {
+        const effect = questions[i].effect
+        maxA += Math.abs(effect.a)
+        maxB += Math.abs(effect.b)
+        maxC += Math.abs(effect.c)
+        maxD += Math.abs(effect.d)
+        maxE += Math.abs(effect.e)
+        maxF += Math.abs(effect.f)
     }
 </script>
 </body>
+
+</html>
