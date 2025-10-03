@@ -4,9 +4,9 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700%7CRoboto:400,700" rel="stylesheet">
     <link href='style.css' rel='stylesheet' type='text/css'>
-    <title>MarxistValues 1.1 Results</title>
-    <link rel="icon" type="image/png" href="icon.png">
-    <link rel="shortcut icon" type="image/png" href="icon.png">
+    <title>MarxistValues 1.2 Results</title>
+    <link rel="icon" type="image/svg" href="icon.svg">
+    <link rel="shortcut icon" type="image/svg" href="icon.svg">
     <meta charset="utf-8">
     <script type="application/javascript" src="ideologies.js">
     </script>
@@ -14,73 +14,73 @@
 
 <body>
 
-    <h1>MarxistValues 1.1<br>Results</h1>
+    <h1>MarxistValues 1.2<br>Results</h1>
 
     <h2><span class="weight-300" id="a-label"></span></h2>
     <div class="axis">
-        <img id="img-revolution" src="value_images/revolution.png" height="128pt" />
+        <img id="img-revolution" src="value_images/revolution.svg" height="128pt" />
         <div class="bar revolution" id="bar-revolution">
             <div class="text-wrapper" id="revolution"></div>
         </div>
         <div class="bar reform" id="bar-reform">
             <div class="text-wrapper" id="reform"></div>
         </div>
-        <img id="img-reform" src="value_images/reform.png" height="128pt" />
+        <img id="img-reform" src="value_images/reform.svg" height="128pt" />
     </div>
     <h2><span class="weight-300" id="b-label"></span></h2>
     <div class="axis">
-        <img id="img-voluntarism" src="value_images/voluntarism.png" height="128pt" />
-        <div class="bar voluntarism" id="bar-voluntarism">
-            <div class="text-wrapper" id="voluntarism"></div>
+        <img id="img-voluntaristic" src="value_images/voluntaristic.svg" height="128pt" />
+        <div class="bar voluntaristic" id="bar-voluntaristic">
+            <div class="text-wrapper" id="voluntaristic"></div>
         </div>
-        <div class="bar economism" id="bar-economism">
-            <div class="text-wrapper" id="economism"></div>
+        <div class="bar economistic" id="bar-economistic">
+            <div class="text-wrapper" id="economistic"></div>
         </div>
-        <img id="img-economism" src="value_images/economism.png" height="128pt" />
+        <img id="img-economistic" src="value_images/economistic.svg" height="128pt" />
     </div>
     <h2><span class="weight-300" id="c-label"></span></h2>
     <div class="axis">
-        <img id="img-central" src="value_images/central.png" height="128pt" />
+        <img id="img-central" src="value_images/central.svg" height="128pt" />
         <div class="bar central" id="bar-central">
             <div class="text-wrapper" id="central"></div>
         </div>
         <div class="bar decentral" id="bar-decentral">
             <div class="text-wrapper" id="decentral"></div>
         </div>
-        <img id="img-decentral" src="value_images/decentral.png" height="128pt" />
+        <img id="img-decentral" src="value_images/decentral.svg" height="128pt" />
     </div>
     <h2><span class="weight-300" id="d-label"></span></h2>
     <div class="axis">
-        <img id="img-international" src="value_images/international.png" height="128pt" />
+        <img id="img-international" src="value_images/international.svg" height="128pt" />
         <div class="bar international" id="bar-international">
             <div class="text-wrapper" id="international"></div>
         </div>
         <div class="bar patriotic" id="bar-patriotic">
             <div class="text-wrapper" id="patriotic"></div>
         </div>
-        <img id="img-patriotic" src="value_images/patriotic.png" height="128pt" />
+        <img id="img-patriotic" src="value_images/patriotic.svg" height="128pt" />
     </div>
     <h2><span class="weight-300" id="e-label"></span></h2>
     <div class="axis">
-        <img id="img-party" src="value_images/party.png" height="128pt" />
+        <img id="img-party" src="value_images/party.svg" height="128pt" />
         <div class="bar party" id="bar-party">
             <div class="text-wrapper" id="party"></div>
         </div>
         <div class="bar union" id="bar-union">
             <div class="text-wrapper" id="union"></div>
         </div>
-        <img id="img-union" src="value_images/union.png" height="128pt" />
+        <img id="img-union" src="value_images/union.svg" height="128pt" />
     </div>
     <h2><span class="weight-300" id="f-label"></span></h2>
     <div class="axis">
-        <img id="img-proletariat" src="value_images/proletariat.png" height="128pt" />
-        <div class="bar proletariat" id="bar-proletariat">
-            <div class="text-wrapper" id="proletariat"></div>
+        <img id="img-proletarian" src="value_images/proletarian.svg" height="128pt" />
+        <div class="bar proletarian" id="bar-proletarian">
+            <div class="text-wrapper" id="proletarian"></div>
         </div>
-        <div class="bar peasantry" id="bar-peasantry">
-            <div class="text-wrapper" id="peasantry"></div>
+        <div class="bar peasant" id="bar-peasant">
+            <div class="text-wrapper" id="peasant"></div>
         </div>
-        <img id="img-peasantry" src="value_images/peasantry.png" height="128pt" />
+        <img id="img-peasant" src="value_images/peasant.svg" height="128pt" />
     </div>
     <h2><span class="weight-300" id="g-label"></span></h2>
     <h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
@@ -155,11 +155,11 @@
         }
 
         const revolution = parseFloat(getQueryVariable('a')) || 0
-        const voluntarism = parseFloat(getQueryVariable('b')) || 0
+        const voluntaristic = parseFloat(getQueryVariable('b')) || 0
         const central = parseFloat(getQueryVariable('c')) || 0
         const international = parseFloat(getQueryVariable('d')) || 0
         const party = parseFloat(getQueryVariable('e')) || 0
-        const proletariat = parseFloat(getQueryVariable('f')) || 0
+        const proletarian = parseFloat(getQueryVariable('f')) || 0
 
         const ideologyTexts = {
             'Orthodox-Marxism': {
@@ -222,7 +222,7 @@
 
         document.getElementById('a-label').innerHTML = setLabel(revolution, 
             "Extremely Revolutionary,Very Revolutionary,Revolutionary,Neutral,Reformist,Very Reformist,Extremely Reformist")
-        document.getElementById('b-label').innerHTML = setLabel(voluntarism, 
+        document.getElementById('b-label').innerHTML = setLabel(voluntaristic, 
             "Extremely Voluntarist,Very Voluntarist,Voluntarist,Neutral,Economist,Very Economist,Extremely Economist")
         document.getElementById('c-label').innerHTML = setLabel(central, 
             "Extremely Centralist,Very Centralist,Centralist,Neutral,Decentralist,Very Decentralist,Extremely Decentralist")
@@ -230,31 +230,31 @@
             "Extremely Internationalist,Very Internationalist,Internationalist,Neutral,Patriotic,Very Patriotic,Extremely Patriotic")
         document.getElementById('e-label').innerHTML = setLabel(party, 
             "Extremely Partisan,Very Partisan,Partisan,Neutral,Unionist,Very Unionist,Extremely Unionist")
-        document.getElementById('f-label').innerHTML = setLabel(proletariat, 
+        document.getElementById('f-label').innerHTML = setLabel(proletarian, 
             "Extremely Proletarian,Very Proletarian,Proletarian,Neutral,Peasant,Very Peasant,Extremely Peasant")
 
-        console.log('Values:', revolution, voluntarism, central, international, party, proletariat)
+        console.log('Values:', revolution, voluntaristic, central, international, party, proletarian)
         console.log('Ideologies object:', ideologies)
         console.log('Ideology texts:', ideologyTexts)
         const reform = (100 - revolution).toFixed(1)
-        const economism = (100 - voluntarism).toFixed(1)
+        const economistic = (100 - voluntaristic).toFixed(1)
         const decentral = (100 - central).toFixed(1)
         const patriotic = (100 - international).toFixed(1)
         const union = (100 - party).toFixed(1)
-        const peasantry = (100 - proletariat).toFixed(1)
+        const peasant = (100 - proletarian).toFixed(1)
 
         setBarValue('revolution', revolution)
         setBarValue('reform', reform)
-        setBarValue('economism', economism)
-        setBarValue('voluntarism', voluntarism)
+        setBarValue('economistic', economistic)
+        setBarValue('voluntaristic', voluntaristic)
         setBarValue('central', central)
         setBarValue('decentral', decentral)
         setBarValue('patriotic', patriotic)
         setBarValue('international', international)
         setBarValue('party', party)
         setBarValue('union', union)
-        setBarValue('proletariat', proletariat)
-        setBarValue('peasantry', peasantry)
+        setBarValue('proletarian', proletarian)
+        setBarValue('peasant', peasant)
 
         let ideology = ''
         let ideodesc = ''
@@ -266,10 +266,10 @@
             let dist = 0
             dist += Math.pow(Math.abs(ideologies[name].a - revolution), 2)
             dist += Math.pow(Math.abs(ideologies[name].c - central), 2)
-            dist += Math.pow(Math.abs(ideologies[name].b - voluntarism), 2)
+            dist += Math.pow(Math.abs(ideologies[name].b - voluntaristic), 2)
             dist += Math.pow(Math.abs(ideologies[name].d - international), 2)
             dist += Math.pow(Math.abs(ideologies[name].e - party), 2)
-            dist += Math.pow(Math.abs(ideologies[name].f - proletariat), 2)
+            dist += Math.pow(Math.abs(ideologies[name].f - proletarian), 2)
 
             // ideologyToDistance[name] = dist
             ideologyIndexAndDistance.push({
@@ -345,31 +345,31 @@
             }
 
             Promise.all([
-                loadImage('value_images/revolution.png'),
-                loadImage('value_images/reform.png'),
-                loadImage('value_images/voluntarism.png'),
-                loadImage('value_images/economism.png'),
-                loadImage('value_images/central.png'),
-                loadImage('value_images/decentral.png'),
-                loadImage('value_images/international.png'),
-                loadImage('value_images/patriotic.png'),
-                loadImage('value_images/party.png'),
-                loadImage('value_images/union.png'),
-                loadImage('value_images/proletariat.png'),
-                loadImage('value_images/peasantry.png')
+                loadImage('value_images/revolution.svg'),
+                loadImage('value_images/reform.svg'),
+                loadImage('value_images/voluntaristic.svg'),
+                loadImage('value_images/economistic.svg'),
+                loadImage('value_images/central.svg'),
+                loadImage('value_images/decentral.svg'),
+                loadImage('value_images/international.svg'),
+                loadImage('value_images/patriotic.svg'),
+                loadImage('value_images/party.svg'),
+                loadImage('value_images/union.svg'),
+                loadImage('value_images/proletarian.svg'),
+                loadImage('value_images/peasant.svg')
             ]).then(images => {
                 ctx.drawImage(images[0], 20, 170, 100, 100);  // revolution
                 ctx.drawImage(images[1], 680, 170, 100, 100); // reform
-                ctx.drawImage(images[2], 20, 290, 100, 100);  // voluntarism
-                ctx.drawImage(images[3], 680, 290, 100, 100); // economism
+                ctx.drawImage(images[2], 20, 290, 100, 100);  // voluntaristic
+                ctx.drawImage(images[3], 680, 290, 100, 100); // economistic
                 ctx.drawImage(images[4], 20, 410, 100, 100);  // central
                 ctx.drawImage(images[5], 680, 410, 100, 100); // decentral
                 ctx.drawImage(images[6], 20, 530, 100, 100);  // international
                 ctx.drawImage(images[7], 680, 530, 100, 100); // patriotic
                 ctx.drawImage(images[8], 20, 650, 100, 100);  // party
                 ctx.drawImage(images[9], 680, 650, 100, 100); // union
-                ctx.drawImage(images[10], 20, 770, 100, 100); // proletariat
-                ctx.drawImage(images[11], 680, 770, 100, 100); // peasantry
+                ctx.drawImage(images[10], 20, 770, 100, 100); // proletarian
+                ctx.drawImage(images[11], 680, 770, 100, 100); // peasant
 
             ctx.fillStyle = '#222222'
             ctx.fillRect(120, 180, 560, 80)
@@ -378,17 +378,17 @@
             ctx.fillRect(120, 540, 560, 80)
             ctx.fillRect(120, 660, 560, 80)
             ctx.fillRect(120, 780, 560, 80)
-            ctx.fillStyle = '#890000'
+            ctx.fillStyle = '#560000'
             ctx.fillRect(120, 184, 5.6 * revolution - 2, 72)
             ctx.fillStyle = '#FC5959'
             ctx.fillRect(682 - 5.6 * reform, 184, 5.6 * reform - 2, 72)
             ctx.fillStyle = '#237B88'
-            ctx.fillRect(120, 304, 5.6 * voluntarism - 2, 72)
+            ctx.fillRect(120, 304, 5.6 * voluntaristic - 2, 72)
             ctx.fillStyle = '#7F7000'
-            ctx.fillRect(682 - 5.6 * economism, 304, 5.6 * economism - 2, 72)
-            ctx.fillStyle = '#560000'
+            ctx.fillRect(682 - 5.6 * economistic, 304, 5.6 * economistic - 2, 72)
+            ctx.fillStyle = '#890000'
             ctx.fillRect(120, 424, 5.6 * central - 2, 72)
-            ctx.fillStyle = '#000000'
+            ctx.fillStyle = '#333333ff'
             ctx.fillRect(682 - 5.6 * decentral, 424, 5.6 * decentral - 2, 72)
             ctx.fillStyle = '#782F52'
             ctx.fillRect(120, 544, 5.6 * international - 2, 72)
@@ -399,31 +399,31 @@
             ctx.fillStyle = '#7F333B'
             ctx.fillRect(682 - 5.6 * union, 664, 5.6 * union - 2, 72)
             ctx.fillStyle = '#61380B'
-            ctx.fillRect(120, 784, 5.6 * proletariat - 2, 72)
+            ctx.fillRect(120, 784, 5.6 * proletarian - 2, 72)
             ctx.fillStyle = '#256E20'
-            ctx.fillRect(682 - 5.6 * peasantry, 784, 5.6 * peasantry - 2, 72)
+            ctx.fillRect(682 - 5.6 * peasant, 784, 5.6 * peasant - 2, 72)
             ctx.fillStyle = '#222222'
             ctx.font = '700 80px Montserrat'
             ctx.textAlign = 'left'
-            ctx.fillText('MarxistValues 1.1', 20, 90)
+            ctx.fillText('MarxistValues 1.2', 20, 90)
             ctx.font = '50px Montserrat'
             ctx.fillText(ideologyTexts[closestMatch.name].name, 20, 140)
 
             ctx.fillStyle = '#FFFFFF'
             ctx.textAlign = 'left'
             if (revolution > 30) {ctx.fillText(revolution + '%', 130, 237.5)}
-            if (voluntarism > 30) {ctx.fillText(voluntarism + '%', 130, 357.5)}
+            if (voluntaristic > 30) {ctx.fillText(voluntaristic + '%', 130, 357.5)}
             if (central > 30) {ctx.fillText(central + '%', 130, 477.5)}
             if (international > 30) {ctx.fillText(international + '%', 130, 597.5)}
             if (party > 30) {ctx.fillText(party + '%', 130, 717.5)}
-            if (proletariat > 30) {ctx.fillText(proletariat + '%', 130, 837.5)}
+            if (proletarian > 30) {ctx.fillText(proletarian + '%', 130, 837.5)}
             ctx.textAlign = 'right'
             if (reform > 30) {ctx.fillText(reform + '%', 670, 237.5)}
-            if (economism > 30) {ctx.fillText(economism + '%', 670, 357.5)}
+            if (economistic > 30) {ctx.fillText(economistic + '%', 670, 357.5)}
             if (decentral > 30) {ctx.fillText(decentral + '%', 670, 477.5)}
             if (patriotic > 30) {ctx.fillText(patriotic + '%', 670, 597.5)}
             if (union > 30) {ctx.fillText(union + '%', 670, 717.5)}
-            if (peasantry > 30) {ctx.fillText(peasantry + '%', 670, 837.5)}
+            if (peasant > 30) {ctx.fillText(peasant + '%', 670, 837.5)}
 
             ctx.fillStyle = '#222222'
             ctx.font = '300 30px Montserrat'
