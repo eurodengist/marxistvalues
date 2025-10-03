@@ -184,7 +184,7 @@ div.text-wrapper {
 }
 
 div.revolution {
-    background-color: #890000;
+    background-color: #560000;
     text-align: left;
     border-right-style: solid;
 }
@@ -196,24 +196,24 @@ div.reform {
 }
 
 div.central {
-    background-color: #560000;
+    background-color: #890000;
     text-align: left;
     border-right-style: solid;
 }
 
 div.decentral {
-    background-color: #000000;
+    background-color: #333333ff;
     text-align: right;
     border-left-style: solid;
 }
 
-div.economism {
+div.economistic {
     background-color: #7F7000;
     text-align: right;
     border-left-style: solid;
 }
 
-div.voluntarism {
+div.voluntaristic {
     background-color: #237B88;
     text-align: left;
     border-right-style: solid;
@@ -243,13 +243,13 @@ div.union {
     border-left-style: solid;
 }
 
-div.proletariat {
+div.proletarian {
     background-color: #61380B;
     text-align: left;
     border-right-style: solid;
 }
 
-div.peasantry {
+div.peasant {
     background-color: #256E20;
     text-align: right;
     border-left-style: solid;
