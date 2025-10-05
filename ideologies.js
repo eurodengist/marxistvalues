@@ -5,7 +5,9 @@ const ideologies = {
     c: 63,
     d: 71,
     e: 62,
-    f: 57
+    f: 57,
+    g: 22,
+    h: 55
   },
   'Leninism': {
     a: 90,
@@ -13,7 +15,9 @@ const ideologies = {
     c: 82,
     d: 80,
     e: 78,
-    f: 78
+    f: 78,
+    g: 25,
+    h: 25
   },
   'Marxism-Leninism': {
     a: 89,
@@ -21,7 +25,9 @@ const ideologies = {
     c: 89,
     d: 35,
     e: 80,
-    f: 90
+    f: 90,
+    g: 92,
+    h: 70
   },
   'Trotskyism': {
     a: 81,
@@ -29,7 +35,9 @@ const ideologies = {
     c: 51,
     d: 90,
     e: 70,
-    f: 57
+    f: 57,
+    g: 14,
+    h: 77
   },
   'Council-Communism': {
     a: 85,
@@ -37,7 +45,9 @@ const ideologies = {
     c: 20,
     d: 73,
     e: 12,
-    f: 62
+    f: 62,
+    g: 4,
+    h: 87
   },
   'MZT': {
     a: 92,
@@ -45,7 +55,9 @@ const ideologies = {
     c: 84,
     d: 40,
     e: 76,
-    f: 63
+    f: 63,
+    g: 36,
+    h: 78
   },
   'Libertarian-Communism': {
     a: 86,
@@ -53,7 +65,9 @@ const ideologies = {
     c: 3,
     d: 77,
     e: 15,
-    f: 33
+    f: 33,
+    g: 0,
+    h: 82
   },
   'Luxemburgism': {
     a: 88,
@@ -61,7 +75,9 @@ const ideologies = {
     c: 50,
     d: 80,
     e: 68,
-    f: 57
+    f: 57,
+    g: 14,
+    h: 68
   },
   'Titoism': {
     a: 86,
@@ -69,7 +85,9 @@ const ideologies = {
     c: 28,
     d: 33,
     e: 60,
-    f: 37
+    f: 37,
+    g: 58,
+    h: 10
   },
   'Hoxhaism': {
     a: 96,
@@ -77,7 +95,9 @@ const ideologies = {
     c: 90,
     d: 26,
     e: 77,
-    f: 92
+    f: 92,
+    g: 94,
+    h: 100
   },
   'Eurocommunism': {
     a: 13,
@@ -85,7 +105,9 @@ const ideologies = {
     c: 27,
     d: 36,
     e: 44,
-    f: 41
+    f: 41,
+    g: 17,
+    h: 0
   },
   'Sankarism': {
     a: 90,
@@ -93,7 +115,9 @@ const ideologies = {
     c: 50,
     d: 40,
     e: 57,
-    f: 35
+    f: 35,
+    g: 24,
+    h: 43
   },
   'Juche': {
     a: 90,
@@ -101,7 +125,9 @@ const ideologies = {
     c: 92,
     d: 13,
     e: 74,
-    f: 77
+    f: 77,
+    g: 93,
+    h: 82
   },
   'Bordigism': {
     a: 91,
@@ -109,6 +135,78 @@ const ideologies = {
     c: 73,
     d: 81,
     e: 76,
-    f: 93
+    f: 93,
+    g: 18,
+    h: 90
+  },
+  'Right-Opposition': {
+    a: 84,
+    b: 32,
+    c: 75,
+    d: 77,
+    e: 80,
+    f: 40,
+    g: 50,
+    h: 17
+  },
+  'Gramscianism': {
+    a: 70,
+    b: 49,
+    c: 46,
+    d: 45,
+    e: 65,
+    f: 40,
+    g: 17,
+    h: 55
+  },
+  'Post-Marxism': {
+    a: 23,
+    b: 39,
+    c: 20,
+    d: 45,
+    e: 32,
+    f: 20,
+    g: 0,
+    h: 33
+  },
+  'Posadism': {
+    a: 96,
+    b: 66,
+    c: 80,
+    d: 80,
+    e: 80,
+    f: 73,
+    g: 10,
+    h: 92
+  },
+  'Shachtmanism': {
+    a: 24,
+    b: 32,
+    c: 22,
+    d: 74,
+    e: 31,
+    f: 32,
+    g: 13,
+    h: 27
+  },
+  'Pabloism': {
+    a: 85,
+    b: 62,
+    c: 80,
+    d: 82,
+    e: 83,
+    f: 73,
+    g: 10,
+    h: 93
+  },
+  'Dengism': {
+    a: 35,
+    b: 28,
+    c: 60,
+    d: 29,
+    e: 67,
+    f: 41,
+    g: 47,
+    h: 13
   }
 }
