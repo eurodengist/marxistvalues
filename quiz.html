@@ -4,143 +4,554 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700%7CRoboto:400,700" rel="stylesheet">
     <link href='style.css' rel='stylesheet' type='text/css'>
-    <title>MarxistValues Quiz</title>
+    <title>MarxistValues 2.0 Results</title>
     <link rel="icon" type="image/svg" href="icon.svg">
     <link rel="shortcut icon" type="image/svg" href="icon.svg">
     <meta charset="utf-8">
+    <script type="application/javascript" src="ideologies.js">
+    </script>
 </head>
 
 <body>
-    <script type="application/javascript" src="questions.js"></script>
 
-    <h2 style="text-align:center;" id="question-number">Loading...</h2>
-    <p class="question" id="question-text"></p>
-    <button class="button" onclick="nextQuestion( 1.0)"
-        style="background-color: #1b5e20;">Strongly Agree</button> <br>
-    <button class="button" onclick="nextQuestion( 0.5)"
-        style="background-color: #4caf50;">Agree</button> <br>
-    <button class="button" onclick="nextQuestion( 0.0)"
-        style="background-color: #bbbbbb;">Neutral/Unsure</button> <br>
-    <button class="button" onclick="nextQuestion(-0.5)"
-        style="background-color: #f44336;">Disagree</button> <br>
-    <button class="button" onclick="nextQuestion(-1.0)"
-        style="background-color: #b71c1c;">Strongly Disagree</button> <br>
-    <button class="small_button" onclick="prevQuestion()" id="back_button">Back</button>
-    <button class="small_button_off" id="back_button_off">Back</button>
-    <br>
+    <h1>MarxistValues 2.0<br>Results</h1>
 
+    <h2><span class="weight-300" id="a-label"></span></h2>
+    <div class="axis">
+        <img id="img-revolution" src="value_images/revolution.svg" height="128pt" />
+        <div class="bar revolution" id="bar-revolution">
+            <div class="text-wrapper" id="revolution"></div>
+        </div>
+        <div class="bar reform" id="bar-reform">
+            <div class="text-wrapper" id="reform"></div>
+        </div>
+        <img id="img-reform" src="value_images/reform.svg" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="b-label"></span></h2>
+    <div class="axis">
+        <img id="img-voluntaristic" src="value_images/voluntaristic.svg" height="128pt" />
+        <div class="bar voluntaristic" id="bar-voluntaristic">
+            <div class="text-wrapper" id="voluntaristic"></div>
+        </div>
+        <div class="bar economistic" id="bar-economistic">
+            <div class="text-wrapper" id="economistic"></div>
+        </div>
+        <img id="img-economistic" src="value_images/economistic.svg" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="c-label"></span></h2>
+    <div class="axis">
+        <img id="img-central" src="value_images/central.svg" height="128pt" />
+        <div class="bar central" id="bar-central">
+            <div class="text-wrapper" id="central"></div>
+        </div>
+        <div class="bar decentral" id="bar-decentral">
+            <div class="text-wrapper" id="decentral"></div>
+        </div>
+        <img id="img-decentral" src="value_images/decentral.svg" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="d-label"></span></h2>
+    <div class="axis">
+        <img id="img-international" src="value_images/international.svg" height="128pt" />
+        <div class="bar international" id="bar-international">
+            <div class="text-wrapper" id="international"></div>
+        </div>
+        <div class="bar patriotic" id="bar-patriotic">
+            <div class="text-wrapper" id="patriotic"></div>
+        </div>
+        <img id="img-patriotic" src="value_images/patriotic.svg" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="e-label"></span></h2>
+    <div class="axis">
+        <img id="img-party" src="value_images/party.svg" height="128pt" />
+        <div class="bar party" id="bar-party">
+            <div class="text-wrapper" id="party"></div>
+        </div>
+        <div class="bar union" id="bar-union">
+            <div class="text-wrapper" id="union"></div>
+        </div>
+        <img id="img-union" src="value_images/union.svg" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="f-label"></span></h2>
+    <div class="axis">
+        <img id="img-proletarian" src="value_images/proletarian.svg" height="128pt" />
+        <div class="bar proletarian" id="bar-proletarian">
+            <div class="text-wrapper" id="proletarian"></div>
+        </div>
+        <div class="bar peasant" id="bar-peasant">
+            <div class="text-wrapper" id="peasant"></div>
+        </div>
+        <img id="img-peasant" src="value_images/peasant.svg" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="g-label"></span></h2>
+    <div class="axis">
+        <img id="img-conservative" src="value_images/conservative.svg" height="128pt" />
+        <div class="bar conservative" id="bar-conservative">
+            <div class="text-wrapper" id="conservative"></div>
+        </div>
+        <div class="bar progressive" id="bar-progressive">
+            <div class="text-wrapper" id="progressive"></div>
+        </div>
+        <img id="img-progressive" src="value_images/progressive.svg" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="h-label"></span></h2>
+    <div class="axis">
+        <img id="img-dogmatic" src="value_images/dogmatic.svg" height="128pt" />
+        <div class="bar dogmatic" id="bar-dogmatic">
+            <div class="text-wrapper" id="dogmatic"></div>
+        </div>
+        <div class="bar pragmatic" id="bar-pragmatic">
+            <div class="text-wrapper" id="pragmatic"></div>
+        </div>
+        <img id="img-pragmatic" src="value_images/pragmatic.svg" height="128pt" />
+    </div>
+    <h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
+    <h3><span class="weight-300" id="ideodesc-label"></span></h3>
+    <p><br>You can download the image with the results below.</p>
+
+    <h2>Next closest matches</h2>
+    <p>With your closest match as 100% and farthest as 0%, here is how closely you
+        matched the other ideologies.</p>
+
+    <dl id="next-matches"></dl>
+
+    <img id="banner-image" src="" alt="MarxistValues Results" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border: 3px solid #222; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <canvas id="banner" width=820 height=1360 style="font-family:Montserrat; display:none;"></canvas>
+    <button class="button" onclick="location.href='index.html';"
+        style="background-color: #2196f3; margin-top: 20px;">Back</button> <br>
     <!-- JavaScript for the test itself -->
+    <script type="application/javascript"></script>
     <script>
-    /* global questions */
-    let maxA, maxB, maxC, maxD, maxE, maxF, maxG, maxH
-    maxA = maxB = maxC = maxD = maxE = maxF = maxG = maxH = 0
-    let a, b, c, d, e, f, g, h
-    a = b = c = d = e = f = g = h = 0
-    let qn = [] 
-    let qi = 0
-    populateQn()
-    let answers = []
-
-    function initQuestion () {
-        const currentQuestion = questions[qn[qi]]
-        document.getElementById('question-text').innerHTML = currentQuestion.question
-        document.getElementById('question-number').innerHTML = `Question ${qi + 1} of ${questions.length}`
-        
-        if (qi === 0) {
-            document.getElementById('back_button').style.display = 'none'
-            document.getElementById('back_button_off').style.display = 'block'
+        /* ideologies */
+        function getQueryVariable (variable) {
+        var query = window.location.search.substring(1)
+        var vars = query.split('&')
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=')
+            if (pair[0] === variable) {
+            return pair[1]
+            }
         }
-        else {
-            document.getElementById('back_button').style.display = 'block'
-            document.getElementById('back_button_off').style.display = 'none'
+        return (NaN)
         }
-    }
 
-    function nextQuestion (mult) {
-        const currentQuestion = questions[qn[qi]]
-        const effect = currentQuestion.effect
-        
-        answers[qi] = mult
-        
-        a += mult * effect.a
-        b += mult * effect.b
-        c += mult * effect.c
-        d += mult * effect.d
-        e += mult * effect.e
-        f += mult * effect.f
-        g += mult * effect.g
-        h += mult * effect.h
-        
-        qi++
-        
-        if (qi < questions.length) {
-            initQuestion()
+        function setBarValue (name, value) {
+        const innerel = document.getElementById(name)
+        const outerel = document.getElementById('bar-' + name)
+        outerel.style.width = (value + '%')
+        innerel.innerHTML = (value + '%')
+        if (innerel.offsetWidth + 20 > outerel.offsetWidth) {
+            innerel.style.visibility = 'hidden'
         }
-        else {
-            results()
         }
-    }
 
-    function prevQuestion () {
-        if (qi === 0) {
-            return
+        function setLabel (val, ary) {
+        ary = ary.split(',')
+        if (val > 100) {
+            return ''
+        } else
+        if (val > 90) {
+            return ary[0]
+        } else
+        if (val > 75) {
+            return ary[1]
+        } else
+        if (val > 60) {
+            return ary[2]
+        } else
+        if (val >= 40) {
+            return ary[3]
+        } else
+        if (val >= 25) {
+            return ary[4]
+        } else
+        if (val >= 10) {
+            return ary[5]
+        } else
+        if (val >= 0) {
+            return ary[6]
+        } else {
+            return ''
         }
-        
-        qi--
-        const currentQuestion = questions[qn[qi]]
-        const effect = currentQuestion.effect
-
-        const prevAnswer = answers[qi]
-        a -= prevAnswer * effect.a
-        b -= prevAnswer * effect.b
-        c -= prevAnswer * effect.c
-        d -= prevAnswer * effect.d
-        e -= prevAnswer * effect.e
-        f -= prevAnswer * effect.f
-        g -= prevAnswer * effect.g
-        h -= prevAnswer * effect.h
-        
-        answers[qi] = undefined
-        
-        initQuestion()
-    }
-
-    function calcScore (score, max) {
-        return (100 * (max + score) / (2 * max)).toFixed(1)
-    }
-
-    function populateQn() {
-        for (let i = 0; i < questions.length; i++) {
-            qn.push(i)
         }
-    }
 
-    function results () {
-        window.location.href = 'results.html' +
-                        `?a=${calcScore(a, maxA)}` +
-                        `&b=${calcScore(b, maxB)}` +
-                        `&c=${calcScore(c, maxC)}` +
-                        `&d=${calcScore(d, maxD)}` +
-                        `&e=${calcScore(e, maxE)}` +
-                        `&f=${calcScore(f, maxF)}` +
-                        `&g=${calcScore(g, maxG)}` +
-                        `&h=${calcScore(h, maxH)}`
-    }
+        const revolution = parseFloat(getQueryVariable('a')) || 0
+        const voluntaristic = parseFloat(getQueryVariable('b')) || 0
+        const central = parseFloat(getQueryVariable('c')) || 0
+        const international = parseFloat(getQueryVariable('d')) || 0
+        const party = parseFloat(getQueryVariable('e')) || 0
+        const proletarian = parseFloat(getQueryVariable('f')) || 0
+        const conservative = parseFloat(getQueryVariable('g')) || 0
+        const dogmatic = parseFloat(getQueryVariable('h')) || 0
 
-    for (let i = 0; i < questions.length; i++) {
-        const effect = questions[i].effect
-        maxA += Math.abs(effect.a)
-        maxB += Math.abs(effect.b)
-        maxC += Math.abs(effect.c)
-        maxD += Math.abs(effect.d)
-        maxE += Math.abs(effect.e)
-        maxF += Math.abs(effect.f)
-        maxG += Math.abs(effect.g)
-        maxH += Math.abs(effect.h)
-    }
+        const ideologyTexts = {
+            'Orthodox-Marxism': {
+                name: 'Orthodox Marxism',
+                desc: 'Orthodox Marxism is a form of Marxism associated with Karl Kautsky, emphasizing scientific socialism, historical materialism, and the inevitability of capitalism’s collapse. It stresses that socialism must arise through class struggle and mass political organization, but often within a parliamentary framework, rejecting both reformist opportunism and premature revolutionary adventurism.'
+            },
+            'Leninism': {
+                name: 'Leninism',
+                desc: 'Leninism is a form of Marxism developed by Vladimir Lenin, advocating a vanguard party to lead the working class in seizing state power. It emphasizes democratic centralism, revolutionary discipline, and the necessity of smashing the capitalist state apparatus to establish a dictatorship of the proletariat as a transitional step toward socialism and communism.'
+            },
+            'Marxism-Leninism': {
+                name: 'Marxism-Leninism', 
+                desc: 'Marxism-Leninism is a form of Marxist theory synthesized by Lenin and further codified under Stalin, combining Marx’s economic analysis with Lenin’s vanguardist politics. It became the official ideology of the Soviet Union, stressing centralized party leadership, state planning, proletarian dictatorship, and the belief that socialism must be built within a single country before global revolution.'
+            },
+            'Trotskyism': {
+                name: 'Orthodox Trotskyism',
+                desc: 'Orthodox Trotskyism is a form of Marxism rooted in Leon Trotsky’s theories, particularly permanent revolution and opposition to Stalinist bureaucratization. It holds that socialism cannot be built in one country but requires international revolution. Orthodox Trotskyists stress the need for workers’ democracy, transitional demands, and critique Stalinist regimes as “degenerated” or “deformed workers’ states.”'
+            },
+            'Council-Communism': {
+                name: 'Council Communism', 
+                desc: 'Council Communism is a form of Marxist socialism emphasizing workers’ councils as the true organs of proletarian power. Emerging in opposition to both social democracy and Leninist party structures, it advocates direct democracy and self-management. Council communists reject hierarchical party leadership, insisting the working class must itself directly control production, politics, and revolutionary struggle.'
+            },
+            'MZT': {
+                name: 'Mao Zedong Thought',
+                desc: "Mao Zedong Thought is a form of Marxism-Leninism adapted by Mao Zedong to Chinese conditions, emphasizing the revolutionary role of the peasantry, protracted people’s war, and mass mobilization. It stresses ideological struggle, continuous revolution under socialism, and the centrality of the Communist Party. Maoism influenced global revolutionary movements, particularly in agrarian and postcolonial societies."
+            },
+            'Libertarian-Communism': {
+                name: 'Libertarian Communism',
+                desc: 'Libertarian Communism is a form of socialism advocating a stateless, classless society based on direct democracy, voluntary cooperation, and common ownership. Rejecting both capitalism and authoritarian socialism, it stresses decentralization, workers’ self-management, and the abolition of wage labor. Libertarian communists envision freedom through collective self-organization, often influenced by anarchist and councilist traditions of struggle.'
+            },
+            'Luxemburgism': {
+                name: 'Luxemburgism', 
+                desc: 'Luxemburgism is a form of Marxism based on Rosa Luxemburg’s theories, emphasizing mass strikes, spontaneous working-class action, and grassroots democracy. Luxemburgists criticize both reformist gradualism and Leninist centralism, arguing that socialism can only be achieved through the self-emancipation of workers. They stress revolutionary spontaneity over rigid party control, while rejecting authoritarian forms of socialism.'
+            },
+            'Titoism': {
+                name: 'Titoism',
+                desc: 'Titoism is a form of Marxism-Leninism associated with Josip Broz Tito, marked by its independence from Soviet control and emphasis on workers’ self-management. Emerging in Yugoslavia, it rejected Stalinist centralization while maintaining a socialist, one-party system. Titoism promoted non-alignment in international politics and experimented with decentralized economic planning through worker cooperatives and local autonomy.'
+            },
+            'Hoxhaism': {
+                name: 'Hoxhaism',
+                desc: 'Hoxhaism is a form of anti-revisionist Marxism-Leninism developed under Enver Hoxha in Albania, characterized by strict adherence to Stalin’s legacy. It rejects both Soviet de-Stalinization and Maoist innovations, advocating centralized planning, ideological purity, and rigid anti-imperialism. Hoxhaism stresses autarky and doctrinal orthodoxy as essential to preserving a genuine socialist society against revisionist tendencies.'
+            },
+            'Eurocommunism': {
+                name: 'Eurocommunism', 
+                desc: 'Eurocommunism is a form of communism that emerged in Western Europe during the Cold War, advocating independence from Soviet influence. It emphasized pluralist democracy, gradual reform, and alliances with broader progressive movements within parliamentary systems. Eurocommunists rejected authoritarian socialism, seeking to blend Marxist ideals with liberal democratic institutions while pursuing social justice and equality.'
+            },
+            'Sankarism': {
+                name: 'Sankarism',
+                desc: 'Sankarism is a form of socialist ideology developed by Thomas Sankara in Burkina Faso, blending Marxism with African anti-imperialism, feminism, and environmentalism. It emphasizes self-reliance, popular participation, and the rejection of neocolonial dependency. Sankarism prioritizes land reform, women’s liberation, and grassroots democracy, aiming to transform postcolonial societies through radical social, political, and cultural change.'
+            },
+            'Juche': {
+                name: 'Juche',
+                desc: 'Juche is a form of Marxism-Leninism developed in North Korea under Kim Il-sung, emphasizing national self-reliance and independence from foreign influence. While rooted in socialist theory, it stresses the primacy of political ideology, the role of leadership, and the centrality of the nation. Juche places sovereignty and autonomy above traditional internationalist Marxist principles.'
+            },
+            'Bordigism': {
+                name: 'Bordigism', 
+                desc: 'Bordigism is a form of Marxism derived from Amadeo Bordiga’s theories, emphasizing strict adherence to Marxist orthodoxy and hostility toward opportunism. Bordigists reject parliamentary politics, trade-union reformism, and personality cults, insisting on a disciplined revolutionary party. They stress that socialism can only emerge after capitalism’s global collapse, with the party guiding but not substituting workers.'
+            },
+            'Right-Opposition': {
+                name: 'Marxism-Leninism (RO)', 
+                desc: 'Marxism-Leninism (Right Opposition) is a form of Marxism-Leninism associated with Nikolai Bukharin, advocating continuation of the New Economic Policy and a strategic alliance with the peasantry. It emphasized gradual industrialization and more balanced economic development while maintaining the Communist Party’s leadership, standing in contrast to Stalin’s forced collectivization and rapid industrial drive.'
+            },
+            'Gramscianism': {
+                name: 'Gramscianism', 
+                desc: 'Gramscianism is a form of Marxism based on Antonio Gramsci’s ideas, emphasizing cultural hegemony and the role of ideology in sustaining class dominance. It highlights the importance of civil society, intellectuals, and consent in political power. Gramscianism argues that revolutionary change requires building counter-hegemony within cultural and social institutions, not merely seizing state power.'
+            },
+            'Post-Marxism': {
+                name: 'Post-Marxism', 
+                desc: 'Post-Marxism is a form of leftist thought that critiques and transcends traditional Marxism, incorporating post-structuralist and postmodernist insights. It emphasizes discourse, identity, and plural struggles beyond class alone. Post-Marxists argue capitalism cannot be analyzed solely in economic terms, and they promote decentralized, democratic, and cultural strategies for achieving social transformation in modern societies.'
+            },
+            'Posadism': {
+                name: 'Posadism', 
+                desc: 'Posadism is a form of Trotskyism associated with J. Posadas, combining Marxist theory with unconventional ideas. It upheld permanent revolution and workers’ democracy but became known for controversial positions such as viewing nuclear war as potentially revolutionary and speculating on extraterrestrial life. Posadism emphasized faith in humanity’s capacity for radical transformation of society.'
+            },
+            'Shachtmanism': {
+                name: 'Shachtmanism', 
+                desc: 'Shachtmanism is a form of Trotskyism developed by Max Shachtman, notable for its theory that the Soviet Union was not a workers’ state but a bureaucratic collectivist society. Shachtmanists emphasized democratic socialism, working-class independence, and rejection of both Stalinism and reformist collaboration, while advocating strategies that balanced revolutionary principles with broader democratic struggles.'
+            },
+            'Pabloism': {
+                name: 'Pabloism', 
+                desc: 'Pabloism is a form of Trotskyism named after Michel Pablo, emphasizing deep entryism into mass workers’ and nationalist movements. It held that revolutionary processes could emerge within existing communist, social-democratic, or anti-colonial parties. Pabloism sought to adapt Trotskyist strategy to postwar realities, promoting flexible tactics while still maintaining commitment to international socialist revolution.'
+            },
+            'Dengism': {
+                name: 'Deng Xiaoping Theory', 
+                desc: 'Deng Xiaoping Theory is a form of Marxism-Leninism rooted in Mao Zedong Thought but adapted to new conditions. It emphasizes “socialism with Chinese characteristics,” combining market reforms and pragmatic modernization with one-party rule. While upholding the Communist Party’s primacy, it argues that developing productive forces and opening to the global economy are necessary stages toward socialism.'
+            }
+        }
 
-    initQuestion()
-</script>
+        document.getElementById('a-label').innerHTML = setLabel(revolution, 
+            "Extremely Revolutionary,Very Revolutionary,Revolutionary,Neutral,Reformist,Very Reformist,Extremely Reformist")
+        document.getElementById('b-label').innerHTML = setLabel(voluntaristic, 
+            "Extremely Voluntarist,Very Voluntarist,Voluntarist,Neutral,Economist,Very Economist,Extremely Economist")
+        document.getElementById('c-label').innerHTML = setLabel(central, 
+            "Extremely Centralist,Very Centralist,Centralist,Neutral,Decentralist,Very Decentralist,Extremely Decentralist")
+        document.getElementById('d-label').innerHTML = setLabel(international, 
+            "Extremely Internationalist,Very Internationalist,Internationalist,Neutral,Patriotic,Very Patriotic,Extremely Patriotic")
+        document.getElementById('e-label').innerHTML = setLabel(party, 
+            "Extremely Partisan,Very Partisan,Partisan,Neutral,Unionist,Very Unionist,Extremely Unionist")
+        document.getElementById('f-label').innerHTML = setLabel(proletarian, 
+            "Extremely Proletarian,Very Proletarian,Proletarian,Neutral,Peasant,Very Peasant,Extremely Peasant")
+        document.getElementById('g-label').innerHTML = setLabel(conservative, 
+            "Extremely Conservative,Very Conservative,Conservative,Neutral,Progressive,Very Progressive,Extremely Progressive")
+        document.getElementById('h-label').innerHTML = setLabel(dogmatic, 
+            "Extremely Dogmatic,Very Dogmatic,Dogmatic,Neutral,Pragmatic,Very Pragmatic,Extremely Pragmatic")
+
+        console.log('Values:', revolution, voluntaristic, central, international, party, proletarian, conservative, dogmatic)
+        console.log('Ideologies object:', ideologies)
+        console.log('Ideology texts:', ideologyTexts)
+        const reform = (100 - revolution).toFixed(1)
+        const economistic = (100 - voluntaristic).toFixed(1)
+        const decentral = (100 - central).toFixed(1)
+        const patriotic = (100 - international).toFixed(1)
+        const union = (100 - party).toFixed(1)
+        const peasant = (100 - proletarian).toFixed(1)
+        const progressive = (100 - conservative).toFixed(1)
+        const pragmatic = (100 - dogmatic).toFixed(1)
+
+        setBarValue('revolution', revolution)
+        setBarValue('reform', reform)
+        setBarValue('economistic', economistic)
+        setBarValue('voluntaristic', voluntaristic)
+        setBarValue('central', central)
+        setBarValue('decentral', decentral)
+        setBarValue('patriotic', patriotic)
+        setBarValue('international', international)
+        setBarValue('party', party)
+        setBarValue('union', union)
+        setBarValue('proletarian', proletarian)
+        setBarValue('peasant', peasant)
+        setBarValue('conservative', conservative)
+        setBarValue('progressive', progressive)
+        setBarValue('dogmatic', dogmatic)
+        setBarValue('pragmatic', pragmatic)
+
+        let ideology = ''
+        let ideodesc = ''
+        const ideologyIndexAndDistance = []
+        var closestMatch = {}
+
+        let index = 0
+        for (const name of Object.keys(ideologies)) {
+            let dist = 0
+            dist += Math.pow(Math.abs(ideologies[name].a - revolution), 2)
+            dist += Math.pow(Math.abs(ideologies[name].c - central), 2)
+            dist += Math.pow(Math.abs(ideologies[name].b - voluntaristic), 2)
+            dist += Math.pow(Math.abs(ideologies[name].d - international), 2)
+            dist += Math.pow(Math.abs(ideologies[name].e - party), 2)
+            dist += Math.pow(Math.abs(ideologies[name].f - proletarian), 2)
+            dist += Math.pow(Math.abs(ideologies[name].g - conservative), 2)
+            dist += Math.pow(Math.abs(ideologies[name].h - dogmatic), 2)
+
+            // ideologyToDistance[name] = dist
+            ideologyIndexAndDistance.push({
+            distance: dist,
+            name,
+            index
+            })
+            index++
+        }
+
+        ideologyIndexAndDistance.sort(function (a, b) {
+            return a.distance - b.distance
+        })
+
+        const distances = ideologyIndexAndDistance.map(function (indexAndDistance) {
+            return indexAndDistance.distance
+        })
+
+        const closestDistance = distances[0]
+        const farthestDistance = distances[distances.length - 1]
+        const distanceSpan = farthestDistance - closestDistance
+
+        closestMatch = ideologyIndexAndDistance[0]
+        document.getElementById('ideology-label').innerHTML = ideologyTexts[closestMatch.name].name
+        document.getElementById('ideodesc-label').innerHTML = ideologyTexts[closestMatch.name].desc
+
+        const nextMatches = document.getElementById('next-matches')
+        let nextMatchesHTML = '';
+
+
+        for (let i = 1; i < ideologyIndexAndDistance.length; i++) {
+            const indexAndDistance = ideologyIndexAndDistance[i];
+            const name = indexAndDistance.name;
+            
+            if (ideologyTexts[name]) {
+                const ideology = ideologyTexts[name].name;
+                const ideodesc = ideologyTexts[name].desc;
+                const relativeDistance = 1 - (indexAndDistance.distance - closestDistance) / distanceSpan;
+                const relativeDistancePercent = Math.round(relativeDistance * 1000) / 10;
+                
+                nextMatchesHTML += '<dt>' + ideology + ': ' + relativeDistancePercent + '%</dt>';
+
+            } else {
+                console.log('Missing ideology text for:', name);
+            }
+        }
+
+        nextMatches.innerHTML = nextMatchesHTML;
+
+        function createImage(src, x, y, w, h) {
+            img = new Image ()
+            img.src = src
+            img.onLoad = function() {
+                ctx.drawImage(img, x, y, w, h)
+            }
+        }
+
+        function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
+            const words = text.split(' ');
+            let line = '';
+            for (let n = 0; n < words.length; n++) {
+                let testLine = line + words[n] + ' ';
+                let metrics = ctx.measureText(testLine);
+                let testWidth = metrics.width;
+                if (testWidth > maxWidth && n > 0) {
+                    ctx.fillText(line, x, y);
+                    line = words[n] + ' ';
+                    y += lineHeight;
+                } else {
+                    line = testLine;
+                }
+            }
+            ctx.fillText(line, x, y);
+        }
+
+        window.onload = function() {
+            var c = document.createElement("canvas")
+            var ctx = c.getContext("2d")
+            c.width = 820;
+            c.height = 1360;
+            ctx.fillStyle = "#EEEEEE"
+            ctx.fillRect(0,0,820,1360);
+
+            function loadImage(src) {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.onload = () => resolve(img);
+                    img.onerror = reject;
+                    img.src = src;
+                });
+            }
+
+            Promise.all([
+                loadImage('value_images/revolution.svg'),
+                loadImage('value_images/reform.svg'),
+                loadImage('value_images/voluntaristic.svg'),
+                loadImage('value_images/economistic.svg'),
+                loadImage('value_images/central.svg'),
+                loadImage('value_images/decentral.svg'),
+                loadImage('value_images/international.svg'),
+                loadImage('value_images/patriotic.svg'),
+                loadImage('value_images/party.svg'),
+                loadImage('value_images/union.svg'),
+                loadImage('value_images/proletarian.svg'),
+                loadImage('value_images/peasant.svg'),
+                loadImage('value_images/conservative.svg'),
+                loadImage('value_images/progressive.svg'),
+                loadImage('value_images/dogmatic.svg'),
+                loadImage('value_images/pragmatic.svg')
+            ]).then(images => {
+                ctx.drawImage(images[0], 20, 170, 100, 100);  // revolution
+                ctx.drawImage(images[1], 680, 170, 100, 100); // reform
+                ctx.drawImage(images[2], 20, 290, 100, 100);  // voluntaristic
+                ctx.drawImage(images[3], 680, 290, 100, 100); // economistic
+                ctx.drawImage(images[4], 20, 410, 100, 100);  // central
+                ctx.drawImage(images[5], 680, 410, 100, 100); // decentral
+                ctx.drawImage(images[6], 20, 530, 100, 100);  // international
+                ctx.drawImage(images[7], 680, 530, 100, 100); // patriotic
+                ctx.drawImage(images[8], 20, 650, 100, 100);  // party
+                ctx.drawImage(images[9], 680, 650, 100, 100); // union
+                ctx.drawImage(images[10], 20, 770, 100, 100); // proletarian
+                ctx.drawImage(images[11], 680, 770, 100, 100); // peasant
+                ctx.drawImage(images[12], 20, 890, 100, 100); // conservative
+                ctx.drawImage(images[13], 680, 890, 100, 100); // progressive
+                ctx.drawImage(images[14], 20, 1010, 100, 100); // dogmatic
+                ctx.drawImage(images[15], 680, 1010, 100, 100); // pragmatic
+
+            ctx.fillStyle = '#222222'
+            ctx.fillRect(120, 180, 560, 80)
+            ctx.fillRect(120, 300, 560, 80)
+            ctx.fillRect(120, 420, 560, 80)
+            ctx.fillRect(120, 540, 560, 80)
+            ctx.fillRect(120, 660, 560, 80)
+            ctx.fillRect(120, 780, 560, 80)
+            ctx.fillRect(120, 900, 560, 80)
+            ctx.fillRect(120, 1020, 560, 80)
+            ctx.fillStyle = '#560000'
+            ctx.fillRect(120, 184, 5.6 * revolution - 2, 72)
+            ctx.fillStyle = '#FC5959'
+            ctx.fillRect(682 - 5.6 * reform, 184, 5.6 * reform - 2, 72)
+            ctx.fillStyle = '#237B88'
+            ctx.fillRect(120, 304, 5.6 * voluntaristic - 2, 72)
+            ctx.fillStyle = '#7F7000'
+            ctx.fillRect(682 - 5.6 * economistic, 304, 5.6 * economistic - 2, 72)
+            ctx.fillStyle = '#890000'
+            ctx.fillRect(120, 424, 5.6 * central - 2, 72)
+            ctx.fillStyle = '#333333ff'
+            ctx.fillRect(682 - 5.6 * decentral, 424, 5.6 * decentral - 2, 72)
+            ctx.fillStyle = '#782F52'
+            ctx.fillRect(120, 544, 5.6 * international - 2, 72)
+            ctx.fillStyle = '#703A13'
+            ctx.fillRect(682 - 5.6 * patriotic, 544, 5.6 * patriotic - 2, 72)
+            ctx.fillStyle = '#963B33'
+            ctx.fillRect(120, 664, 5.6 * party - 2, 72)
+            ctx.fillStyle = '#7F333B'
+            ctx.fillRect(682 - 5.6 * union, 664, 5.6 * union - 2, 72)
+            ctx.fillStyle = '#61380B'
+            ctx.fillRect(120, 784, 5.6 * proletarian - 2, 72)
+            ctx.fillStyle = '#256E20'
+            ctx.fillRect(682 - 5.6 * peasant, 784, 5.6 * peasant - 2, 72)
+            ctx.fillStyle = '#263785'
+            ctx.fillRect(120, 904, 5.6 * conservative - 2, 72)
+            ctx.fillStyle = '#72A13D'
+            ctx.fillRect(682 - 5.6 * progressive, 904, 5.6 * progressive - 2, 72)
+            ctx.fillStyle = '#AD5C00'
+            ctx.fillRect(120, 1024, 5.6 * dogmatic - 2, 72)
+            ctx.fillStyle = '#E37A00'
+            ctx.fillRect(682 - 5.6 * pragmatic, 1024, 5.6 * pragmatic - 2, 72)
+            ctx.fillStyle = '#222222'
+            ctx.font = '700 80px Montserrat'
+            ctx.textAlign = 'left'
+            ctx.fillText('MarxistValues 2.0', 20, 90)
+            ctx.font = '50px Montserrat'
+            ctx.fillText(ideologyTexts[closestMatch.name].name, 20, 140)
+
+            ctx.fillStyle = '#FFFFFF'
+            ctx.textAlign = 'left'
+            if (revolution > 30) {ctx.fillText(revolution + '%', 130, 237.5)}
+            if (voluntaristic > 30) {ctx.fillText(voluntaristic + '%', 130, 357.5)}
+            if (central > 30) {ctx.fillText(central + '%', 130, 477.5)}
+            if (international > 30) {ctx.fillText(international + '%', 130, 597.5)}
+            if (party > 30) {ctx.fillText(party + '%', 130, 717.5)}
+            if (proletarian > 30) {ctx.fillText(proletarian + '%', 130, 837.5)}
+            if (conservative > 30) {ctx.fillText(conservative + '%', 130, 957.5)}
+            if (dogmatic > 30) {ctx.fillText(dogmatic + '%', 130, 1077.5)}
+            ctx.textAlign = 'right'
+            if (reform > 30) {ctx.fillText(reform + '%', 670, 237.5)}
+            if (economistic > 30) {ctx.fillText(economistic + '%', 670, 357.5)}
+            if (decentral > 30) {ctx.fillText(decentral + '%', 670, 477.5)}
+            if (patriotic > 30) {ctx.fillText(patriotic + '%', 670, 597.5)}
+            if (union > 30) {ctx.fillText(union + '%', 670, 717.5)}
+            if (peasant > 30) {ctx.fillText(peasant + '%', 670, 837.5)}
+            if (progressive > 30) {ctx.fillText(progressive + '%', 670, 957.5)}
+            if (pragmatic > 30) {ctx.fillText(pragmatic + '%', 670, 1077.5)}
+
+            ctx.fillStyle = '#222222'
+            ctx.font = '700 20px Montserrat'
+            ctx.textAlign = 'left';
+            wrapText(ctx, ideologyTexts[closestMatch.name].desc, 20, 1150, 790, 25);
+            ctx.fillStyle = '#222222'
+            ctx.font = '300 30px Montserrat'
+            ctx.textAlign = 'right';
+            ctx.fillText('eurodengist.github.io/marxistvalues/', 780, 1335)
+            ctx.textAlign = 'center'
+            ctx.fillText('' + document.getElementById('a-label').innerHTML, 400, 175)
+            ctx.fillText('' + document.getElementById('b-label').innerHTML, 400, 295)
+            ctx.fillText('' + document.getElementById('c-label').innerHTML, 400, 415)
+            ctx.fillText('' + document.getElementById('d-label').innerHTML, 400, 535)
+            ctx.fillText('' + document.getElementById('e-label').innerHTML, 400, 655)
+            ctx.fillText('' + document.getElementById('f-label').innerHTML, 400, 775)
+            ctx.fillText('' + document.getElementById('g-label').innerHTML, 400, 895)
+            ctx.fillText('' + document.getElementById('h-label').innerHTML, 400, 1015)
+
+            document.getElementById("banner-image").src = c.toDataURL();
+            c.style.display = 'block';
+            }).catch(error => {
+                console.error('Error loading images:', error);
+            });
+        }
+    </script>
 </body>
 
 </html>
