@@ -55,10 +55,12 @@ p.question {
     padding: 16pt;
     border-radius: 16pt;
     font-size: 36pt;
+    text-align: center;
+    line-height: 1 !important;
     display: flex;
+    flex-direction: column; /* Добавьте это */
     justify-content: center;
     align-items: center;
-    text-align: center;
 
 }
 
