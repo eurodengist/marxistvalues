@@ -1,5 +1,5 @@
 questions = [
-    // Revolution - Reform +5
+    // Revolution - Reform
     {
         "question": "Reforming capitalist society to achieve better rights for workers is desirable.",
         "effect": {
@@ -8,7 +8,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -19,7 +21,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -30,7 +34,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -41,7 +47,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -52,7 +60,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -63,7 +73,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -74,7 +86,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -85,7 +99,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -96,7 +112,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -107,7 +125,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -118,7 +138,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -129,7 +151,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -140,7 +164,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -151,7 +177,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -162,10 +190,12 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
-    // Voluntarism - Economism +5
+    // Voluntarism - Economism
     {
         "question": "Material conditions and needs are the dominant drive behind socioeconomic changes.",
         "effect": {
@@ -174,7 +204,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -185,7 +217,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -196,7 +230,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -207,7 +243,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -218,7 +256,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -229,7 +269,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -240,7 +282,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -251,7 +295,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -262,7 +308,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -273,7 +321,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -284,7 +334,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -295,7 +347,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -306,7 +360,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -317,7 +373,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -328,10 +386,12 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
-    // Central-Decentral +5
+    // Central - Decentral
     {
         "question": "An economy is generally designed better when it is organized bottom-up rather than top-down.",
         "effect": {
@@ -340,7 +400,9 @@ questions = [
             "c": -10,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -351,7 +413,9 @@ questions = [
             "c": -5,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -362,7 +426,9 @@ questions = [
             "c": 5,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -373,7 +439,9 @@ questions = [
             "c": 10,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -384,7 +452,9 @@ questions = [
             "c": -5,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -395,7 +465,9 @@ questions = [
             "c": -5,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -406,7 +478,9 @@ questions = [
             "c": -5,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -417,7 +491,9 @@ questions = [
             "c": -10,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -428,7 +504,9 @@ questions = [
             "c": 5,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -439,7 +517,9 @@ questions = [
             "c": 10,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -450,7 +530,9 @@ questions = [
             "c": 10,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -461,7 +543,9 @@ questions = [
             "c": 5,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -472,7 +556,9 @@ questions = [
             "c": 5,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -483,7 +569,9 @@ questions = [
             "c": 10,
             "d": 0,
             "e": 5,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -494,10 +582,12 @@ questions = [
             "c": 5,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
-    // Internationalism - Patriotism +5
+    // Internationalism - Patriotism
     {
         "question": "A world socialist republic is a realistic and desirable goal.",
         "effect": {
@@ -506,7 +596,9 @@ questions = [
             "c": 0,
             "d": 5,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -517,7 +609,9 @@ questions = [
             "c": 0,
             "d": 10,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -528,7 +622,9 @@ questions = [
             "c": 0,
             "d": 5,
             "e": 5,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -539,7 +635,9 @@ questions = [
             "c": 0,
             "d": -5,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -550,7 +648,9 @@ questions = [
             "c": 0,
             "d": 5,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -561,7 +661,9 @@ questions = [
             "c": 0,
             "d": 10,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -572,7 +674,9 @@ questions = [
             "c": 0,
             "d": 5,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -583,7 +687,9 @@ questions = [
             "c": 0,
             "d": 10,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -594,7 +700,9 @@ questions = [
             "c": 0,
             "d": 5,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -605,7 +713,9 @@ questions = [
             "c": 0,
             "d": 5,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -616,7 +726,9 @@ questions = [
             "c": 0,
             "d": 10,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -627,7 +739,9 @@ questions = [
             "c": 0,
             "d": 5,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -638,7 +752,9 @@ questions = [
             "c": 0,
             "d": -10,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -649,7 +765,9 @@ questions = [
             "c": 0,
             "d": -5,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -660,10 +778,12 @@ questions = [
             "c": 0,
             "d": -5,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
-    // Party - Union +5
+    // Party - Union
     {
         "question": "Socialist political parties should participate in liberal democratic elections.",
         "effect": {
@@ -672,7 +792,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 5,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -683,7 +805,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": -5,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -694,7 +818,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": -10,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -705,7 +831,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": -5,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -716,7 +844,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -727,7 +857,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 10,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -738,7 +870,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": -5,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -749,7 +883,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": -10,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -760,7 +896,9 @@ questions = [
             "c": -5,
             "d": 0,
             "e": -5,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -771,7 +909,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 5,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -782,7 +922,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 5,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -793,7 +935,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 10,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -804,7 +948,9 @@ questions = [
             "c": 5,
             "d": 0,
             "e": 10,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -815,7 +961,9 @@ questions = [
             "c": 5,
             "d": -5,
             "e": 10,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -826,10 +974,12 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 5,
-            "f": 0
+            "f": 0,
+            "g": 0,
+            "h": 0
         }
     },
-    // Proletariat - Peasantry + 5
+    // Proletariat - Peasantry
     {
         "question": "The industrial working class should be the leading force in the socialist revolution.",
         "effect": {
@@ -838,7 +988,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 10
+            "f": 10,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -849,7 +1001,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": -10
+            "f": -10,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -860,7 +1014,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 20
+            "f": 20,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -871,7 +1027,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 5
+            "f": 5,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -882,7 +1040,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": -5
+            "f": -5,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -893,7 +1053,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 5
+            "f": 5,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -904,7 +1066,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": -5
+            "f": -5,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -915,7 +1079,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": -5
+            "f": -5,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -926,7 +1092,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 10
+            "f": 10,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -937,7 +1105,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": -5
+            "f": -5,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -948,7 +1118,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 5
+            "f": 5,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -959,7 +1131,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 10
+            "f": 10,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -970,7 +1144,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 10
+            "f": 10,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -981,7 +1157,9 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": 5
+            "f": 5,
+            "g": 0,
+            "h": 0
         }
     },
     {
@@ -992,7 +1170,401 @@ questions = [
             "c": 0,
             "d": 0,
             "e": 0,
-            "f": -5
+            "f": -5,
+            "g": 0,
+            "h": 0
+        }
+    },
+    // Conservative - Progressive
+    {
+        "question": "Traditional family structures are the foundation of a stable society.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 5,
+            "h": 0
+        }
+    },
+    {
+        "question": "Men and women have inherently different roles in society.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 10,
+            "h": 0
+        }
+    },
+    {
+        "question": "A community is strongest when people uphold traditional moral values.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 5,
+            "h": 0
+        }
+    },
+    {
+        "question": "It is harmful to encourage children to question their gender identity.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 10,
+            "h": 0
+        }
+    },
+    {
+        "question": "Families can take many forms, and all should be equally respected.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": -5,
+            "h": 0
+        }
+    },
+    {
+        "question": "Gender roles are outdated and should be abolished.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": -5,
+            "h": 0
+        }
+    },
+    {
+        "question": "Public displays of sexuality should be accepted as normal.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": -5,
+            "h": 0
+        }
+    },
+    {
+        "question": "Preserving tradition should never come at the cost of equality and inclusion.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": -5,
+            "h": 0
+        }
+    },
+    {
+        "question": "Modesty in dress and behavior should be valued over personal expression.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 5,
+            "h": 0
+        }
+    },
+    {
+        "question": "Marriage is primarily about raising children, not personal fulfillment.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 5,
+            "h": 0
+        }
+    },
+    {
+        "question": "Children should learn about diverse sexual orientations and identities at school.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": -5,
+            "h": 0
+        }
+    },
+    {
+        "question": "Society benefits when women and men share equal leadership roles.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": -5,
+            "h": 0
+        }
+    },
+    {
+        "question": "Divorce is a valid choice if a marriage no longer serves the people in it.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": -5,
+            "h": 0
+        }
+    },
+    {
+        "question": "Marriage and parenthood are personal choices, not social obligations.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": -5,
+            "h": 0
+        }
+    },
+    {
+        "question": "Same-sex couples should have the same rights to adoption as heterosexual couples.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": -10,
+            "h": 0
+        }
+    },
+    // Dogmatic - Pragmatic
+    {
+        "question": "Socialism must abolish markets entirely, as they inevitably restore capitalism.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": 5
+        }
+    },
+    {
+        "question": "Cooperation with capitalist states only strengthens imperialism.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": 5
+        }
+    },
+    {
+        "question": "The Soviet Union after Stalin was revisionist and no longer socialist.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": 5
+        }
+    },
+    {
+        "question": "Class enemies must be eliminated, not integrated into socialist society.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": 5
+        }
+    },
+    {
+        "question": "Market mechanisms can be used as tools to strengthen socialism.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": -5
+        }
+    },
+    {
+        "question": "Limited private enterprise can coexist with socialism if the state leads overall.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": -5
+        }
+    },
+    {
+        "question": "Socialism must adapt to each country’s unique conditions.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": -5
+        }
+    },
+    {
+        "question": "Foreign investment can benefit socialism if properly regulated.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": -5
+        }
+    },
+    {
+        "question": "Opening up to global markets can accelerate socialist construction.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": -5
+        }
+    },
+    {
+        "question": "“It doesn’t matter if a cat is black or white, as long as it catches mice.”",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": -5
+        }
+    },
+    {
+        "question": "Rural collectivization is necessary to eliminate private property completely.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": 5
+        }
+    },
+    {
+        "question": "Once private profit exists, socialism has already been lost.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": 5
+        }
+    },
+    {
+        "question": "Reform is always the first step toward restoring capitalism.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": 5
+        }
+    },
+    {
+        "question": "Allowing farmers private plots can increase productivity within socialism.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": -5
+        }
+    },
+    {
+        "question": "International trade is necessary for modernization and progress.",
+        "effect": {
+            "a": 0,
+            "b": 0,
+            "c": 0,
+            "d": 0,
+            "e": 0,
+            "f": 0,
+            "g": 0,
+            "h": -5
         }
     }
 ];
