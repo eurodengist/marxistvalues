@@ -4,7 +4,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700%7CRoboto:400,700" rel="stylesheet">
     <link href='style.css' rel='stylesheet' type='text/css'>
-    <title>MarxistValues 1.2 Results</title>
+    <title>MarxistValues 2.0 Results</title>
     <link rel="icon" type="image/svg" href="icon.svg">
     <link rel="shortcut icon" type="image/svg" href="icon.svg">
     <meta charset="utf-8">
@@ -14,7 +14,7 @@
 
 <body>
 
-    <h1>MarxistValues 1.2<br>Results</h1>
+    <h1>MarxistValues 2.0<br>Results</h1>
 
     <h2><span class="weight-300" id="a-label"></span></h2>
     <div class="axis">
@@ -83,10 +83,30 @@
         <img id="img-peasant" src="value_images/peasant.svg" height="128pt" />
     </div>
     <h2><span class="weight-300" id="g-label"></span></h2>
+    <div class="axis">
+        <img id="img-conservative" src="value_images/conservative.svg" height="128pt" />
+        <div class="bar conservative" id="bar-conservative">
+            <div class="text-wrapper" id="conservative"></div>
+        </div>
+        <div class="bar progressive" id="bar-progressive">
+            <div class="text-wrapper" id="progressive"></div>
+        </div>
+        <img id="img-progressive" src="value_images/progressive.svg" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="h-label"></span></h2>
+    <div class="axis">
+        <img id="img-dogmatic" src="value_images/dogmatic.svg" height="128pt" />
+        <div class="bar dogmatic" id="bar-dogmatic">
+            <div class="text-wrapper" id="dogmatic"></div>
+        </div>
+        <div class="bar pragmatic" id="bar-pragmatic">
+            <div class="text-wrapper" id="pragmatic"></div>
+        </div>
+        <img id="img-pragmatic" src="value_images/pragmatic.svg" height="128pt" />
+    </div>
     <h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
     <h3><span class="weight-300" id="ideodesc-label"></span></h3>
-    <p><br>You can send these results by copying and pasting the URL at the top of the page or
-        using the image below.</p>
+    <p><br>You can download the image with the results below.</p>
 
     <h2>Next closest matches</h2>
     <p>With your closest match as 100% and farthest as 0%, here is how closely you
@@ -95,7 +115,7 @@
     <dl id="next-matches"></dl>
 
     <img id="banner-image" src="" alt="MarxistValues Results" style="max-width: 100%; height: auto; display: block; margin: 0 auto; border: 3px solid #222; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-    <canvas id="banner" width=800 height=950 style="font-family:Montserrat; display:none;"></canvas>
+    <canvas id="banner" width=820 height=1360 style="font-family:Montserrat; display:none;"></canvas>
     <button class="button" onclick="location.href='index.html';"
         style="background-color: #2196f3; margin-top: 20px;">Back</button> <br>
     <!-- JavaScript for the test itself -->
@@ -160,63 +180,93 @@
         const international = parseFloat(getQueryVariable('d')) || 0
         const party = parseFloat(getQueryVariable('e')) || 0
         const proletarian = parseFloat(getQueryVariable('f')) || 0
+        const conservative = parseFloat(getQueryVariable('g')) || 0
+        const dogmatic = parseFloat(getQueryVariable('h')) || 0
 
         const ideologyTexts = {
             'Orthodox-Marxism': {
                 name: 'Orthodox Marxism',
-                desc: 'Orthodox Marxism (Kautskyism) is a form of Marxism that emphasizes gradual, parliamentary paths to socialism through democratic institutions. It upholds Marx’s scientific determinism while rejecting premature insurrection or vanguardist approaches to revolution.'
+                desc: 'Orthodox Marxism is a form of Marxism associated with Karl Kautsky, emphasizing scientific socialism, historical materialism, and the inevitability of capitalism’s collapse. It stresses that socialism must arise through class struggle and mass political organization, but often within a parliamentary framework, rejecting both reformist opportunism and premature revolutionary adventurism.'
             },
             'Leninism': {
                 name: 'Leninism',
-                desc: 'Leninism is a form of Marxism that stresses the need for a disciplined vanguard party, democratic centralism, and proletarian dictatorship to overthrow capitalism and establish socialism through organized revolutionary leadership.'
+                desc: 'Leninism is a form of Marxism developed by Vladimir Lenin, advocating a vanguard party to lead the working class in seizing state power. It emphasizes democratic centralism, revolutionary discipline, and the necessity of smashing the capitalist state apparatus to establish a dictatorship of the proletariat as a transitional step toward socialism and communism.'
             },
             'Marxism-Leninism': {
                 name: 'Marxism-Leninism', 
-                desc: 'Marxism-Leninism is a form of state socialism that combines Marxist analysis with Leninist organization, supporting a centralized party, planned economy, and proletarian dictatorship as the foundation of socialist governance.'
+                desc: 'Marxism-Leninism is a form of Marxist theory synthesized by Lenin and further codified under Stalin, combining Marx’s economic analysis with Lenin’s vanguardist politics. It became the official ideology of the Soviet Union, stressing centralized party leadership, state planning, proletarian dictatorship, and the belief that socialism must be built within a single country before global revolution.'
             },
             'Trotskyism': {
-                name: 'Trotskyism',
-                desc: 'Trotskyism is a form of Marxism that advocates permanent revolution, workers’ democracy, and international struggle against capitalism, rejecting Stalinist “socialism in one country” and bureaucratic authoritarianism.'
+                name: 'Orthodox Trotskyism',
+                desc: 'Orthodox Trotskyism is a form of Marxism rooted in Leon Trotsky’s theories, particularly permanent revolution and opposition to Stalinist bureaucratization. It holds that socialism cannot be built in one country but requires international revolution. Orthodox Trotskyists stress the need for workers’ democracy, transitional demands, and critique Stalinist regimes as “degenerated” or “deformed workers’ states.”'
             },
             'Council-Communism': {
                 name: 'Council Communism', 
-                desc: 'Council Communism is a form of communism that rejects party rule, advocating workers’ councils and direct proletarian democracy as the true basis of socialist governance and economic planning.'
+                desc: 'Council Communism is a form of Marxist socialism emphasizing workers’ councils as the true organs of proletarian power. Emerging in opposition to both social democracy and Leninist party structures, it advocates direct democracy and self-management. Council communists reject hierarchical party leadership, insisting the working class must itself directly control production, politics, and revolutionary struggle.'
             },
             'MZT': {
                 name: 'Mao Zedong Thought',
-                desc: "Mao Zedong Thought is an ideology blending Marxism-Leninism with Chinese realities, emphasizing peasant-led revolution, class struggle, continuous revolution, and the Communist Party's central role."
+                desc: "Mao Zedong Thought is a form of Marxism-Leninism adapted by Mao Zedong to Chinese conditions, emphasizing the revolutionary role of the peasantry, protracted people’s war, and mass mobilization. It stresses ideological struggle, continuous revolution under socialism, and the centrality of the Communist Party. Maoism influenced global revolutionary movements, particularly in agrarian and postcolonial societies."
             },
             'Libertarian-Communism': {
                 name: 'Libertarian Communism',
-                desc: 'Libertarian communism is an ideology that advocates for a stateless, classless society based on voluntary federation and common ownership.'
+                desc: 'Libertarian Communism is a form of socialism advocating a stateless, classless society based on direct democracy, voluntary cooperation, and common ownership. Rejecting both capitalism and authoritarian socialism, it stresses decentralization, workers’ self-management, and the abolition of wage labor. Libertarian communists envision freedom through collective self-organization, often influenced by anarchist and councilist traditions of struggle.'
             },
             'Luxemburgism': {
                 name: 'Luxemburgism', 
-                desc: 'Luxemburgism is a form of Marxism that stresses mass spontaneity, grassroots democracy, and revolutionary self-emancipation of the working class, rejecting authoritarian centralism and reformist gradualism.'
+                desc: 'Luxemburgism is a form of Marxism based on Rosa Luxemburg’s theories, emphasizing mass strikes, spontaneous working-class action, and grassroots democracy. Luxemburgists criticize both reformist gradualism and Leninist centralism, arguing that socialism can only be achieved through the self-emancipation of workers. They stress revolutionary spontaneity over rigid party control, while rejecting authoritarian forms of socialism.'
             },
             'Titoism': {
                 name: 'Titoism',
-                desc: 'Titoism is a form of socialism developed in Yugoslavia that emphasizes workers’ self-management, non-alignment in global politics, and independence from Soviet control.'
+                desc: 'Titoism is a form of Marxism-Leninism associated with Josip Broz Tito, marked by its independence from Soviet control and emphasis on workers’ self-management. Emerging in Yugoslavia, it rejected Stalinist centralization while maintaining a socialist, one-party system. Titoism promoted non-alignment in international politics and experimented with decentralized economic planning through worker cooperatives and local autonomy.'
             },
             'Hoxhaism': {
                 name: 'Hoxhaism',
-                desc: 'Hoxhaism is a form of anti-revisionist Marxism-Leninism rooted in Stalinist orthodoxy, rejecting both Soviet and Chinese deviations while advocating centralized planning and strict proletarian dictatorship.'
+                desc: 'Hoxhaism is a form of anti-revisionist Marxism-Leninism developed under Enver Hoxha in Albania, characterized by strict adherence to Stalin’s legacy. It rejects both Soviet de-Stalinization and Maoist innovations, advocating centralized planning, ideological purity, and rigid anti-imperialism. Hoxhaism stresses autarky and doctrinal orthodoxy as essential to preserving a genuine socialist society against revisionist tendencies.'
             },
             'Eurocommunism': {
                 name: 'Eurocommunism', 
-                desc: 'Eurocommunism is a form of Western Marxism that supports democratic institutions, pluralism, and independence from Moscow, advocating a parliamentary path to socialism within liberal democracies.'
+                desc: 'Eurocommunism is a form of communism that emerged in Western Europe during the Cold War, advocating independence from Soviet influence. It emphasized pluralist democracy, gradual reform, and alliances with broader progressive movements within parliamentary systems. Eurocommunists rejected authoritarian socialism, seeking to blend Marxist ideals with liberal democratic institutions while pursuing social justice and equality.'
             },
             'Sankarism': {
                 name: 'Sankarism',
-                desc: 'Sankarism is a form of African socialism that blends Marxism with anti-imperialism, feminism, and ecological sustainability, emphasizing grassroots empowerment and revolutionary transformation under Thomas Sankara’s leadership.'
+                desc: 'Sankarism is a form of socialist ideology developed by Thomas Sankara in Burkina Faso, blending Marxism with African anti-imperialism, feminism, and environmentalism. It emphasizes self-reliance, popular participation, and the rejection of neocolonial dependency. Sankarism prioritizes land reform, women’s liberation, and grassroots democracy, aiming to transform postcolonial societies through radical social, political, and cultural change.'
             },
             'Juche': {
                 name: 'Juche',
-                desc: 'Juche is a form of North Korean socialism that emphasizes self-reliance, national independence, and absolute leadership under the Workers’ Party, positioning ideology above material conditions.'
+                desc: 'Juche is a form of Marxism-Leninism developed in North Korea under Kim Il-sung, emphasizing national self-reliance and independence from foreign influence. While rooted in socialist theory, it stresses the primacy of political ideology, the role of leadership, and the centrality of the nation. Juche places sovereignty and autonomy above traditional internationalist Marxist principles.'
             },
             'Bordigism': {
                 name: 'Bordigism', 
-                desc: 'Bordigism is a form of Marxism that rejects democracy and reformism, viewing the communist party itself as the historical subject of revolution and socialism, with strict adherence to Marxist orthodoxy.'
+                desc: 'Bordigism is a form of Marxism derived from Amadeo Bordiga’s theories, emphasizing strict adherence to Marxist orthodoxy and hostility toward opportunism. Bordigists reject parliamentary politics, trade-union reformism, and personality cults, insisting on a disciplined revolutionary party. They stress that socialism can only emerge after capitalism’s global collapse, with the party guiding but not substituting workers.'
+            },
+            'Right-Opposition': {
+                name: 'Marxism-Leninism (RO)', 
+                desc: 'Marxism-Leninism (Right Opposition) is a form of Marxism-Leninism associated with Nikolai Bukharin, advocating continuation of the New Economic Policy and a strategic alliance with the peasantry. It emphasized gradual industrialization and more balanced economic development while maintaining the Communist Party’s leadership, standing in contrast to Stalin’s forced collectivization and rapid industrial drive.'
+            },
+            'Gramscianism': {
+                name: 'Gramscianism', 
+                desc: 'Gramscianism is a form of Marxism based on Antonio Gramsci’s ideas, emphasizing cultural hegemony and the role of ideology in sustaining class dominance. It highlights the importance of civil society, intellectuals, and consent in political power. Gramscianism argues that revolutionary change requires building counter-hegemony within cultural and social institutions, not merely seizing state power.'
+            },
+            'Post-Marxism': {
+                name: 'Post-Marxism', 
+                desc: 'Post-Marxism is a form of leftist thought that critiques and transcends traditional Marxism, incorporating post-structuralist and postmodernist insights. It emphasizes discourse, identity, and plural struggles beyond class alone. Post-Marxists argue capitalism cannot be analyzed solely in economic terms, and they promote decentralized, democratic, and cultural strategies for achieving social transformation in modern societies.'
+            },
+            'Posadism': {
+                name: 'Posadism', 
+                desc: 'Posadism is a form of Trotskyism associated with J. Posadas, combining Marxist theory with unconventional ideas. It upheld permanent revolution and workers’ democracy but became known for controversial positions such as viewing nuclear war as potentially revolutionary and speculating on extraterrestrial life. Posadism emphasized faith in humanity’s capacity for radical transformation of society.'
+            },
+            'Shachtmanism': {
+                name: 'Shachtmanism', 
+                desc: 'Shachtmanism is a form of Trotskyism developed by Max Shachtman, notable for its theory that the Soviet Union was not a workers’ state but a bureaucratic collectivist society. Shachtmanists emphasized democratic socialism, working-class independence, and rejection of both Stalinism and reformist collaboration, while advocating strategies that balanced revolutionary principles with broader democratic struggles.'
+            },
+            'Pabloism': {
+                name: 'Pabloism', 
+                desc: 'Pabloism is a form of Trotskyism named after Michel Pablo, emphasizing deep entryism into mass workers’ and nationalist movements. It held that revolutionary processes could emerge within existing communist, social-democratic, or anti-colonial parties. Pabloism sought to adapt Trotskyist strategy to postwar realities, promoting flexible tactics while still maintaining commitment to international socialist revolution.'
+            },
+            'Dengism': {
+                name: 'Deng Xiaoping Theory', 
+                desc: 'Deng Xiaoping Theory is a form of Marxism-Leninism rooted in Mao Zedong Thought but adapted to new conditions. It emphasizes “socialism with Chinese characteristics,” combining market reforms and pragmatic modernization with one-party rule. While upholding the Communist Party’s primacy, it argues that developing productive forces and opening to the global economy are necessary stages toward socialism.'
             }
         }
 
@@ -232,8 +282,12 @@
             "Extremely Partisan,Very Partisan,Partisan,Neutral,Unionist,Very Unionist,Extremely Unionist")
         document.getElementById('f-label').innerHTML = setLabel(proletarian, 
             "Extremely Proletarian,Very Proletarian,Proletarian,Neutral,Peasant,Very Peasant,Extremely Peasant")
+        document.getElementById('g-label').innerHTML = setLabel(conservative, 
+            "Extremely Conservative,Very Conservative,Conservative,Neutral,Progressive,Very Progressive,Extremely Progressive")
+        document.getElementById('h-label').innerHTML = setLabel(dogmatic, 
+            "Extremely Dogmatic,Very Dogmatic,Dogmatic,Neutral,Pragmatic,Very Pragmatic,Extremely Pragmatic")
 
-        console.log('Values:', revolution, voluntaristic, central, international, party, proletarian)
+        console.log('Values:', revolution, voluntaristic, central, international, party, proletarian, conservative, dogmatic)
         console.log('Ideologies object:', ideologies)
         console.log('Ideology texts:', ideologyTexts)
         const reform = (100 - revolution).toFixed(1)
@@ -242,6 +296,8 @@
         const patriotic = (100 - international).toFixed(1)
         const union = (100 - party).toFixed(1)
         const peasant = (100 - proletarian).toFixed(1)
+        const progressive = (100 - conservative).toFixed(1)
+        const pragmatic = (100 - dogmatic).toFixed(1)
 
         setBarValue('revolution', revolution)
         setBarValue('reform', reform)
@@ -255,6 +311,10 @@
         setBarValue('union', union)
         setBarValue('proletarian', proletarian)
         setBarValue('peasant', peasant)
+        setBarValue('conservative', conservative)
+        setBarValue('progressive', progressive)
+        setBarValue('dogmatic', dogmatic)
+        setBarValue('pragmatic', pragmatic)
 
         let ideology = ''
         let ideodesc = ''
@@ -270,6 +330,8 @@
             dist += Math.pow(Math.abs(ideologies[name].d - international), 2)
             dist += Math.pow(Math.abs(ideologies[name].e - party), 2)
             dist += Math.pow(Math.abs(ideologies[name].f - proletarian), 2)
+            dist += Math.pow(Math.abs(ideologies[name].g - conservative), 2)
+            dist += Math.pow(Math.abs(ideologies[name].h - dogmatic), 2)
 
             // ideologyToDistance[name] = dist
             ideologyIndexAndDistance.push({
@@ -311,7 +373,7 @@
                 const relativeDistancePercent = Math.round(relativeDistance * 1000) / 10;
                 
                 nextMatchesHTML += '<dt>' + ideology + ': ' + relativeDistancePercent + '%</dt>';
-                nextMatchesHTML += '<dd>' + ideodesc + '</dd>';
+
             } else {
                 console.log('Missing ideology text for:', name);
             }
@@ -327,13 +389,31 @@
             }
         }
 
+        function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
+            const words = text.split(' ');
+            let line = '';
+            for (let n = 0; n < words.length; n++) {
+                let testLine = line + words[n] + ' ';
+                let metrics = ctx.measureText(testLine);
+                let testWidth = metrics.width;
+                if (testWidth > maxWidth && n > 0) {
+                    ctx.fillText(line, x, y);
+                    line = words[n] + ' ';
+                    y += lineHeight;
+                } else {
+                    line = testLine;
+                }
+            }
+            ctx.fillText(line, x, y);
+        }
+
         window.onload = function() {
             var c = document.createElement("canvas")
             var ctx = c.getContext("2d")
-            c.width = 800;
-            c.height = 950;
+            c.width = 820;
+            c.height = 1360;
             ctx.fillStyle = "#EEEEEE"
-            ctx.fillRect(0,0,800,950);
+            ctx.fillRect(0,0,820,1360);
 
             function loadImage(src) {
                 return new Promise((resolve, reject) => {
@@ -356,7 +436,11 @@
                 loadImage('value_images/party.svg'),
                 loadImage('value_images/union.svg'),
                 loadImage('value_images/proletarian.svg'),
-                loadImage('value_images/peasant.svg')
+                loadImage('value_images/peasant.svg'),
+                loadImage('value_images/conservative.svg'),
+                loadImage('value_images/progressive.svg'),
+                loadImage('value_images/dogmatic.svg'),
+                loadImage('value_images/pragmatic.svg')
             ]).then(images => {
                 ctx.drawImage(images[0], 20, 170, 100, 100);  // revolution
                 ctx.drawImage(images[1], 680, 170, 100, 100); // reform
@@ -370,6 +454,10 @@
                 ctx.drawImage(images[9], 680, 650, 100, 100); // union
                 ctx.drawImage(images[10], 20, 770, 100, 100); // proletarian
                 ctx.drawImage(images[11], 680, 770, 100, 100); // peasant
+                ctx.drawImage(images[12], 20, 890, 100, 100); // conservative
+                ctx.drawImage(images[13], 680, 890, 100, 100); // progressive
+                ctx.drawImage(images[14], 20, 1010, 100, 100); // dogmatic
+                ctx.drawImage(images[15], 680, 1010, 100, 100); // pragmatic
 
             ctx.fillStyle = '#222222'
             ctx.fillRect(120, 180, 560, 80)
@@ -378,6 +466,8 @@
             ctx.fillRect(120, 540, 560, 80)
             ctx.fillRect(120, 660, 560, 80)
             ctx.fillRect(120, 780, 560, 80)
+            ctx.fillRect(120, 900, 560, 80)
+            ctx.fillRect(120, 1020, 560, 80)
             ctx.fillStyle = '#560000'
             ctx.fillRect(120, 184, 5.6 * revolution - 2, 72)
             ctx.fillStyle = '#FC5959'
@@ -402,10 +492,18 @@
             ctx.fillRect(120, 784, 5.6 * proletarian - 2, 72)
             ctx.fillStyle = '#256E20'
             ctx.fillRect(682 - 5.6 * peasant, 784, 5.6 * peasant - 2, 72)
+            ctx.fillStyle = '#263785'
+            ctx.fillRect(120, 904, 5.6 * conservative - 2, 72)
+            ctx.fillStyle = '#72A13D'
+            ctx.fillRect(682 - 5.6 * progressive, 904, 5.6 * progressive - 2, 72)
+            ctx.fillStyle = '#AD5C00'
+            ctx.fillRect(120, 1024, 5.6 * dogmatic - 2, 72)
+            ctx.fillStyle = '#E37A00'
+            ctx.fillRect(682 - 5.6 * pragmatic, 1024, 5.6 * pragmatic - 2, 72)
             ctx.fillStyle = '#222222'
             ctx.font = '700 80px Montserrat'
             ctx.textAlign = 'left'
-            ctx.fillText('MarxistValues 1.2', 20, 90)
+            ctx.fillText('MarxistValues 2.0', 20, 90)
             ctx.font = '50px Montserrat'
             ctx.fillText(ideologyTexts[closestMatch.name].name, 20, 140)
 
@@ -417,6 +515,8 @@
             if (international > 30) {ctx.fillText(international + '%', 130, 597.5)}
             if (party > 30) {ctx.fillText(party + '%', 130, 717.5)}
             if (proletarian > 30) {ctx.fillText(proletarian + '%', 130, 837.5)}
+            if (conservative > 30) {ctx.fillText(conservative + '%', 130, 957.5)}
+            if (dogmatic > 30) {ctx.fillText(dogmatic + '%', 130, 1077.5)}
             ctx.textAlign = 'right'
             if (reform > 30) {ctx.fillText(reform + '%', 670, 237.5)}
             if (economistic > 30) {ctx.fillText(economistic + '%', 670, 357.5)}
@@ -424,10 +524,17 @@
             if (patriotic > 30) {ctx.fillText(patriotic + '%', 670, 597.5)}
             if (union > 30) {ctx.fillText(union + '%', 670, 717.5)}
             if (peasant > 30) {ctx.fillText(peasant + '%', 670, 837.5)}
+            if (progressive > 30) {ctx.fillText(progressive + '%', 670, 957.5)}
+            if (pragmatic > 30) {ctx.fillText(pragmatic + '%', 670, 1077.5)}
 
             ctx.fillStyle = '#222222'
+            ctx.font = '700 20px Montserrat'
+            ctx.textAlign = 'left';
+            wrapText(ctx, ideologyTexts[closestMatch.name].desc, 20, 1150, 790, 25);
+            ctx.fillStyle = '#222222'
             ctx.font = '300 30px Montserrat'
-            ctx.fillText('eurodengist.github.io/marxistvalues/', 780, 920)
+            ctx.textAlign = 'right';
+            ctx.fillText('eurodengist.github.io/marxistvalues/', 780, 1335)
             ctx.textAlign = 'center'
             ctx.fillText('' + document.getElementById('a-label').innerHTML, 400, 175)
             ctx.fillText('' + document.getElementById('b-label').innerHTML, 400, 295)
@@ -436,6 +543,7 @@
             ctx.fillText('' + document.getElementById('e-label').innerHTML, 400, 655)
             ctx.fillText('' + document.getElementById('f-label').innerHTML, 400, 775)
             ctx.fillText('' + document.getElementById('g-label').innerHTML, 400, 895)
+            ctx.fillText('' + document.getElementById('h-label').innerHTML, 400, 1015)
 
             document.getElementById("banner-image").src = c.toDataURL();
             c.style.display = 'block';
