@@ -23,11 +23,11 @@ const ideologies = {
     a: 89,
     b: 66,
     c: 89,
-    d: 35,
+    d: 45,
     e: 80,
-    f: 90,
-    g: 92,
-    h: 70
+    f: 70,
+    g: 70,
+    h: 50
   },
   'Trotskyism': {
     a: 81,
@@ -58,6 +58,16 @@ const ideologies = {
     f: 63,
     g: 36,
     h: 78
+  },
+  'MLM': {
+    a: 100,
+    b: 95,
+    c: 95,
+    d: 95,
+    e: 95,
+    f: 70,
+    g: 75,
+    h: 100
   },
   'Libertarian-Communism': {
     a: 86,
@@ -200,10 +210,10 @@ const ideologies = {
     h: 93
   },
   'Dengism': {
-    a: 35,
+    a: 50,
     b: 28,
     c: 60,
-    d: 29,
+    d: 40,
     e: 67,
     f: 41,
     g: 47,
